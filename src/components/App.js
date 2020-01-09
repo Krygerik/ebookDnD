@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { CoverBook } from './CoverBook';
+import { Content } from './Content';
 import '../styles/App.css';
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      isVisibleCover: true
+      isVisibleCover: false
     }
   }
 
@@ -21,8 +22,8 @@ class App extends Component {
     return (
       <div>
         { this.state.isVisibleCover 
-            ? <CoverBook onClick={this.onClickCoverHandler}/> 
-            : <div></div> 
+            ? <CoverBook onClick={this.onClickCoverHandler} /> 
+            : <Content /> 
         }
       </div>
     );
