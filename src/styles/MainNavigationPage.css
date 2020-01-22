@@ -1,0 +1,16 @@
+.mainNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainNavigation > h1 {
+  font-weight: 600;
+  position: absolute;
+  top: 65px;
+}
+
+.mainNavigation > a {
+  font-size: 24px;
+  margin-bottom: 10px;
+}

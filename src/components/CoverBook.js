@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import coverBook from '../assets/coverBook.jpg';
-import '../styles/CoverBook.css';
+import coverBook from "../assets/coverBook.jpg";
+import "../styles/CoverBook.css";
 
 export class CoverBook extends Component {
   render() {

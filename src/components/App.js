@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { CoverBook } from './CoverBook';
-import { Content } from './Content';
-import '../styles/App.css';
+import { CoverBook } from "./CoverBook";
+import { PageBook } from "./PageBook";
+import "../styles/App.css";
 
 class App extends Component {
   constructor() {
@@ -9,22 +9,23 @@ class App extends Component {
 
     this.state = {
       isVisibleCover: false
-    }
+    };
   }
 
   onClickCoverHandler = () => {
     this.setState({
       isVisibleCover: false
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <div>
-        { this.state.isVisibleCover 
-            ? <CoverBook onClick={this.onClickCoverHandler} /> 
-            : <Content /> 
-        }
+        {this.state.isVisibleCover ? (
+          <CoverBook onClick={this.onClickCoverHandler} />
+        ) : (
+          <PageBook />
+        )}
       </div>
     );
   }
