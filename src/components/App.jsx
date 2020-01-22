@@ -1,32 +1,36 @@
 import React, { Component } from "react";
-import { CoverBook } from "./CoverBook";
-import { PageBook } from "./PageBook";
+import { Switch, Route } from "react-router-dom";
+import { NavigationPage } from "./NavigationPage";
+import { getMainNavigation, getRaceNavigation } from "../content/model";
+import { ContentPage } from "./ContentPage";
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isVisibleCover: false
-    };
-  }
-
-  onClickCoverHandler = () => {
-    this.setState({
-      isVisibleCover: false
-    });
-  };
-
   render() {
+    const mainNavigationPage = getMainNavigation();
+    const raceNavigationPage = getRaceNavigation();
+
     return (
-      <div>
-        {this.state.isVisibleCover ? (
-          <CoverBook onClick={this.onClickCoverHandler} />
-        ) : (
-          <PageBook />
-        )}
-      </div>
+      <Switch>
+        <Route
+          exact
+          path={mainNavigationPage.urlPath}
+          render={props => (
+            <NavigationPage {...props} page={mainNavigationPage} />
+          )}
+        />
+        <Route
+          exact
+          path={raceNavigationPage.urlPath}
+          render={props => (
+            <NavigationPage {...props} page={raceNavigationPage} />
+          )}
+        />
+        <Route
+          path={`${raceNavigationPage.urlPath}/:key`}
+          component={ContentPage}
+        />
+      </Switch>
     );
   }
 }
