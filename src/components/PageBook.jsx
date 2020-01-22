@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import headerImage from "../assets/headerPage.png";
 import footerImage from "../assets/footerPage.png";
 import { Switch, Route } from "react-router-dom";
-import { MainNavigationPage } from "../pages/MainNavigationPage";
-import { RaceNavigationPage } from "../pages/RaceNavigationPage";
-import { RacePage } from "../pages/RacePage";
-import "../styles/PageBook.css";
+import { MainNavigationPage } from "./MainNavigationPage";
+import { RaceNavigationPage } from "./RaceNavigationPage";
+import { RacePage } from "./RacePage";
+import "./PageBook.css";
 
 export class PageBook extends Component {
   render() {

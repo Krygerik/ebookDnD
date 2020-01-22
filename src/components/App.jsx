@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CoverBook } from "./CoverBook";
 import { PageBook } from "./PageBook";
-import "../styles/App.css";
+import "./App.css";
 
 class App extends Component {
   constructor() {
