@@ -10,20 +10,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
-        },
+        }
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
       {
-        test : /\.(jpg|jpeg|png)$/,
+        test: /\.(jpg|jpeg|png)$/,
         exclude: /(node_modules)/,
-        loader : 'file-loader'
+        loader: "file-loader"
       }
     ]
   },
@@ -31,5 +31,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html"
     })
-  ]
+  ],
+  resolve: {
+    extensions: [".js", ".jsx"]
+  }
 };

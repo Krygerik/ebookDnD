@@ -1,5 +1,5 @@
 import React from "react";
-import { getRaceByKey } from "../content/race.js";
+import { getRaceByKey } from "../content/race";
 import { useParams } from "react-router-dom";
 
 export const RacePage = () => {

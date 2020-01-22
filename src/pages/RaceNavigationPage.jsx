@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getLinks } from "../content/race.js";
+import { getLinks } from "../content/race";
 
 export const RaceNavigationPage = () => {
   const { title, links } = getLinks();

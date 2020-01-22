@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/MainNavigationPage.css";
-import { title, navigationlinks } from "../content/mainNavigation";
+import { title, navigationlinks } from "../content/mainNavigation.json";
 
 export const MainNavigationPage = () => {
   return (
