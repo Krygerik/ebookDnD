@@ -1,3 +1,5 @@
+import priestLvlTable from "./priestLvlTable.json";
+
 export default {
   title: "Классы",
   urlPath: "/classes",
@@ -150,6 +152,15 @@ export default {
               на роль персонажа.`
             }
           ]
+        },
+        {
+          name: "Таблица уровней",
+          key: "lvl-table",
+          value: {
+            type: "table",
+            tableData: priestLvlTable,
+            addition: ``
+          }
         }
       ]
     }
