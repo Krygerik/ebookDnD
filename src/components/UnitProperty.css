@@ -1,31 +1,31 @@
-.raceProperty {
+.unitProperty {
   font-size: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.raceProperty > label {
+.unitProperty > label {
   font-weight: 800;
   align-self: center;
   font-size: 26px;
   margin-bottom: 10px;
 }
 
-.raceProperty__value {
+.unitProperty__value {
   text-align: center;
   font-size: 22px;
 }
 
-.raceProperty__value:not(:last-child) {
+.unitProperty__value:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.raceProperty__addition {
+.unitProperty__addition {
   text-align: center;
   font-style: italic;
 }
 
-.raceProperty > img {
+.unitProperty > img {
   object-fit: contain;
 }

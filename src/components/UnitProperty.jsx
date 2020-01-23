@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import "./RaceProperty.css";
+import "./UnitProperty.css";
 
-export const RaceProperty = props => {
-  const { raceData } = props;
+export const UnitProperty = props => {
+  const { unitData } = props;
   let { propertyKey } = useParams();
-  const currentProperty = raceData.filter(
+  const currentProperty = unitData.filter(
     raceProp => raceProp.key === propertyKey
   );
 
@@ -14,11 +14,11 @@ export const RaceProperty = props => {
   return (
     <div>
       {value.map((item, index) => (
-        <div key={index} className="raceProperty">
+        <div key={index} className="unitProperty">
           <label>{item.label}</label>
           {item.image ? <img src={item.image} /> : null}
-          <span className="raceProperty__value">{item.value}</span>
-          <span className="raceProperty__addition">{item.addition}</span>
+          <span className="unitProperty__value">{item.value}</span>
+          <span className="unitProperty__addition">{item.addition}</span>
         </div>
       ))}
     </div>

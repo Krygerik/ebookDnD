@@ -1,4 +1,4 @@
-import halfOrcPicture from "../assets/halfOrc.png";
+import halfOrcPicture from "../../assets/halfOrc.png";
 
 export default {
   title: "Расы",

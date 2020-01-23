@@ -6,20 +6,20 @@ export const PageNavigation = props => {
 
   return (
     <div className="pageNavigation">
-      {data.map((raceData, index) => {
+      {data.map((chapterData, index) => {
         const currentLink = location.hash.split(propertyKey).pop();
         const isActive = currentLink
-          ? currentLink === "/" + raceData.key
+          ? currentLink === "/" + chapterData.key
           : index === 0;
 
         return (
-          <Link to={`${match.url}/${raceData.key}`} key={index}>
+          <Link to={`${match.url}/${chapterData.key}`} key={index}>
             <div
               className={`pageNavigation__link ${
                 isActive ? "pageNavigation__link--active" : ""
               }`}
             >
-              {raceData.name}
+              {chapterData.name}
             </div>
           </Link>
         );

@@ -1,6 +1,8 @@
-import classes from "./classesData";
-import race from "./raceData";
-import spells from "./spellsData";
+import race from "./dictionaries/race";
+import classes from "./dictionaries/classes";
+import spells from "./dictionaries/spells";
+
+const chapters = [race, classes];
 
 const getUrlWithName = data => ({
   name: data.title,
@@ -10,11 +12,11 @@ const getUrlWithName = data => ({
 export const getMainNavigation = () => ({
   title: "Содержание",
   urlPath: "/",
-  links: [getUrlWithName(race), getUrlWithName(classes), getUrlWithName(spells)]
+  links: chapters.map(chapter => getUrlWithName(chapter))
 });
 
-export const getRaceNavigation = () => {
-  const { title, urlPath, links } = race;
+const getChapterData = chapter => {
+  const { title, urlPath, links } = chapter;
 
   return {
     urlPath,
@@ -28,8 +30,18 @@ export const getRaceNavigation = () => {
   };
 };
 
-export const getRaceByKey = key => {
-  const { links } = race;
+export const getAllChapters = () => {
+  return chapters.map(chapter => getChapterData(chapter));
+};
 
-  return links.filter(currentRace => currentRace.key === key)[0];
+export const getSubChapterByKey = key => {
+  const subChapters = chapters.reduce((reduceLinks, chapter) => {
+    return reduceLinks.concat(chapter.links);
+  }, []);
+
+  const filteredSubChapterByKey = subChapters.filter(
+    subChapter => subChapter.key === key
+  );
+
+  return filteredSubChapterByKey[0];
 };

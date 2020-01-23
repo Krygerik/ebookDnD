@@ -1,15 +1,15 @@
 import React from "react";
 import { useParams, useRouteMatch, Switch, Route } from "react-router-dom";
-import { getRaceByKey } from "../content/model";
+import { getSubChapterByKey } from "../content/model";
 import { NavigationBar } from "./NavigationBar";
-import { RaceProperty } from "./RaceProperty";
+import { UnitProperty } from "./UnitProperty";
 import { PageNavigation } from "./PageNavigation";
 import "./ContentPage.css";
 
 export const ContentPage = props => {
   const { key } = useParams();
   let match = useRouteMatch();
-  const { name, data } = getRaceByKey(key);
+  const { name, data } = getSubChapterByKey(key);
   const { parrentUrl } = props;
 
   return (
@@ -25,7 +25,7 @@ export const ContentPage = props => {
         <div className="pageContent">
           <Switch>
             <Route path={`${match.path}/:propertyKey`}>
-              <RaceProperty raceData={data} />
+              <UnitProperty unitData={data} />
             </Route>
           </Switch>
         </div>
