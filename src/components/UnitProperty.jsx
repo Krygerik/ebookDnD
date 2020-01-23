@@ -11,7 +11,7 @@ export const UnitProperty = props => {
 
   const { value } = currentProperty[0];
 
-  if (value.type === "table") {
+  if (!Array.isArray(value)) {
     const { header, body } = value.tableData;
 
     return (
@@ -52,7 +52,7 @@ export const UnitProperty = props => {
   } else {
     return (
       <div>
-        {value.data.map((item, index) => (
+        {value.map((item, index) => (
           <div key={index} className="unitProperty">
             <label>{item.label}</label>
             {item.image ? <img src={item.image} /> : null}
