@@ -23,12 +23,18 @@ class App extends Component {
           exact
           path={raceNavigationPage.urlPath}
           render={props => (
-            <NavigationPage {...props} page={raceNavigationPage} />
+            <NavigationPage
+              {...props}
+              page={raceNavigationPage}
+              parrentUrl={mainNavigationPage.urlPath}
+            />
           )}
         />
         <Route
           path={`${raceNavigationPage.urlPath}/:key`}
-          component={ContentPage}
+          render={props => (
+            <ContentPage {...props} parrentUrl={raceNavigationPage.urlPath} />
+          )}
         />
       </Switch>
     );
