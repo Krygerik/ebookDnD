@@ -1,13 +1,18 @@
-import priestGodsTable from "./tables/priestGodsTable.json";
-import priestLvlTable from "./tables/priestLvlTable.json";
+import gods from "./tables/gods.json";
+import priestLevels from "./tables/priestLevels.json";
+import priestStarterPack from "./tables/priestStarterPack.json";
 
 export default [
   {
     key: "gods-table",
-    data: priestGodsTable
+    data: gods
   },
   {
     key: "priest-lvl-table",
-    data: priestLvlTable
+    data: priestLevels
+  },
+  {
+    key: "priest-starter-pack",
+    data: priestStarterPack
   }
 ]

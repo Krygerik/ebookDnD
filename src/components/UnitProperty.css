@@ -18,6 +18,10 @@
   font-size: 22px;
 }
 
+.unitProperty__value > p {
+  margin: 0;
+}
+
 .unitProperty__value:not(:last-child) {
   margin-bottom: 10px;
 }

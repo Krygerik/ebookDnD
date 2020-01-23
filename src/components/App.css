@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  font-family: cursive;
+}
+
+button {
+  font-family: cursive;
 }
 
 header,

@@ -20,9 +20,16 @@ export const UnitProperty = props => {
           {item.image ? <img src={item.image} /> : null}
           {item.type === 'table'
             ? (<Table tableKey={item.value} />)
-            : (<span className="unitProperty__value">{item.value}</span>)
+            : (<span className="unitProperty__value">{
+              item.value.map((propText, i) => (
+                <p key={i}>{propText}</p>
+              ))
+              }</span>)
           }
-          <span className="unitProperty__addition">{item.addition}</span>
+          {item.addition 
+            ? (<span className="unitProperty__addition">{item.addition}</span>)
+            : null
+          }
         </div>
       ))}
     </div>
