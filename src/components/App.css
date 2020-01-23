@@ -24,28 +24,6 @@ footer {
   padding: 0 30px;
 }
 
-.raceProperty {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.raceProperty > label {
-  font-weight: 800;
-  align-self: center;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.raceProperty > span {
-  text-align: center;
-}
-
-.raceProperty > img {
-  object-fit: contain;
-}
-
 header > div {
   background: url(../assets/headerPage.png) no-repeat center center;
   background-size: cover;
