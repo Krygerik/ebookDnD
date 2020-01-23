@@ -22,15 +22,14 @@ export const getRaceNavigation = () => {
     isKeyNavigation: true,
     links: links.map(link => ({
       name: link.name,
-      key: link.key
+      key: link.key,
+      keyProperty: link.data[0].key
     }))
   };
 };
 
 export const getRaceByKey = key => {
   const { links } = race;
-
-  console.table(key);
 
   return links.filter(currentRace => currentRace.key === key)[0];
 };

@@ -1,0 +1,21 @@
+.pageNavigation {
+  height: 100%;
+  width: 20%;
+  border-right: 2px solid #8e473d;
+  padding: 20px;
+}
+
+.pageNavigation__link {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px;
+  color: #8e473d;
+}
+
+.pageNavigation__link--active {
+  background-color: lightgray;
+}
+
+.pageContent {
+  width: 80%;
+}

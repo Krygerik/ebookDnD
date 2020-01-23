@@ -1,11 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useRouteMatch, Switch, Route } from "react-router-dom";
 import { getRaceByKey } from "../content/model";
 import { NavigationBar } from "./NavigationBar";
+import { RaceProperty } from "./RaceProperty";
+import { PageNavigation } from "./PageNavigation";
+import "./ContentPage.css";
 
 export const ContentPage = props => {
   const { key } = useParams();
-  const { name, description } = getRaceByKey(key);
+  let match = useRouteMatch();
+  const { name, data } = getRaceByKey(key);
   const { parrentUrl } = props;
 
   return (
@@ -16,17 +20,14 @@ export const ContentPage = props => {
           <NavigationBar backUrl={parrentUrl} />
         </div>
       </header>
-      <div className="content">
-        <div className="mainNavigation">
-          <div className="pageContent">
-            {description.map((item, index) => (
-              <div key={index} className="raceProperty">
-                <label>{item.label}</label>
-                {item.image ? <img src={item.image} /> : null}
-                <span>{item.value}</span>
-              </div>
-            ))}
-          </div>
+      <div className="pageBody">
+        <PageNavigation data={data} match={match} propertyKey={key} />
+        <div className="pageContent">
+          <Switch>
+            <Route path={`${match.path}/:propertyKey`}>
+              <RaceProperty raceData={data} />
+            </Route>
+          </Switch>
         </div>
       </div>
       <footer>

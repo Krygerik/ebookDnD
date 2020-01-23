@@ -15,11 +15,14 @@ export const NavigationPage = props => {
           <NavigationBar backUrl={parrentUrl} />
         </div>
       </header>
-      <div className="content">
+      <div className="pageBody">
         <div className="navigationBook">
           {isKeyNavigation
             ? links.map(navLink => (
-                <Link to={urlPath + "/" + navLink.key} key={navLink.key}>
+                <Link
+                  to={`${urlPath}/${navLink.key}/${navLink.keyProperty}`}
+                  key={navLink.key}
+                >
                   {navLink.name}
                 </Link>
               ))
