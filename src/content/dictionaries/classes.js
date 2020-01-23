@@ -1,6 +1,3 @@
-import priestLvlTable from "./priestLvlTable.json";
-import priestGodsTable from "./priestGodsTable.json";
-
 export default {
   title: "Классы",
   urlPath: "/classes",
@@ -157,19 +154,25 @@ export default {
         {
           name: "Таблица уровней",
           key: "lvl-table",
-          value: {
-            tableData: priestLvlTable,
-            addition: `В дополнение к указанным заклинаниям в день, жрец получает, начиная с первого уровня, дополнительное заклинание из
-            своей сферы, с 1-го по 9-й уровни. Это отображено в виде «+1». Они не суммируются. Эти заклинания идут помимо бонусных
-            заклинаний по высокой Мудрости.`
-          }
+          value: [
+            {
+              type: "table",
+              value: "priest-lvl-table",
+              addition: `В дополнение к указанным заклинаниям в день, жрец получает, начиная с первого уровня, дополнительное заклинание из
+              своей сферы, с 1-го по 9-й уровни. Это отображено в виде «+1». Они не суммируются. Эти заклинания идут помимо бонусных
+              заклинаний по высокой Мудрости.`
+            }
+          ]
         },
         {
           name: "Таблица богов",
           key: "gods-table",
-          value: {
-            tableData: priestGodsTable
-          }
+          value: [
+            {
+              type: "table",
+              value: "gods-table"
+            }
+          ]
         }
       ]
     }
