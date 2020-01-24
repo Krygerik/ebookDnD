@@ -1,3 +1,7 @@
+.unitPropertyList {
+  width: 100%;
+}
+
 .unitProperty {
   font-size: 20px;
   display: flex;

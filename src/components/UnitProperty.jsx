@@ -10,26 +10,26 @@ export const UnitProperty = props => {
     raceProp => raceProp.key === propertyKey
   );
 
-  const {value} = currentProperty[0]
+  const { value } = currentProperty[0];
 
   return (
-    <div>
+    <div className="unitPropertyList">
       {value.map((item, index) => (
         <div key={index} className="unitProperty">
           <label>{item.label}</label>
           {item.image ? <img src={item.image} /> : null}
-          {item.type === 'table'
-            ? (<Table tableKey={item.value} />)
-            : (<span className="unitProperty__value">{
-              item.value.map((propText, i) => (
+          {item.type === "table" ? (
+            <Table tableKey={item.value} />
+          ) : (
+            <span className="unitProperty__value">
+              {item.value.map((propText, i) => (
                 <p key={i}>{propText}</p>
-              ))
-              }</span>)
-          }
-          {item.addition 
-            ? (<span className="unitProperty__addition">{item.addition}</span>)
-            : null
-          }
+              ))}
+            </span>
+          )}
+          {item.addition ? (
+            <span className="unitProperty__addition">{item.addition}</span>
+          ) : null}
         </div>
       ))}
     </div>
