@@ -3,8 +3,9 @@ import classes from "./dictionaries/classes";
 import spells from "./dictionaries/spells";
 import tables from "./dictionaries/tables";
 import introduction from "./dictionaries/introduction";
+import creationChar from "./dictionaries/basicCreationCharacter";
 
-const chapters = [introduction, race, classes];
+const chapters = [introduction, creationChar, race, classes];
 
 const getUrlWithName = data => ({
   name: data.title,

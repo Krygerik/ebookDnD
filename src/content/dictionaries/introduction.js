@@ -1,6 +1,6 @@
 export default {
-  title: "Прочее",
-  urlPath: "/other",
+  title: "Введение",
+  urlPath: "/intro",
   links: [
     {
       name: "Введение",
