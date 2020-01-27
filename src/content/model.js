@@ -5,7 +5,7 @@ import tables from "./dictionaries/tables";
 import introduction from "./dictionaries/introduction";
 import creationChar from "./dictionaries/basicCreationCharacter";
 
-const chapters = [introduction, creationChar, race, classes];
+const chapters = [introduction, creationChar, race, classes, spells];
 
 const getUrlWithName = data => ({
   name: data.title,
