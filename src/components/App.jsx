@@ -25,7 +25,11 @@ class App extends Component {
         ))}
         {allChapterData.map((chapter, index) => (
           <Route path={`${chapter.urlPath}/:key`} key={index}>
-            <ContentPage parrentUrl={chapter.urlPath} />
+            <ContentPage parrentUrl={
+              chapter.links.length > 1 
+                ? chapter.urlPath
+                : undefined
+            } />
           </Route>
         ))}
       </Switch>
