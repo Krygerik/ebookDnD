@@ -21,11 +21,13 @@ export const UnitProperty = props => {
           {item.type === "table" ? (
             <Table tableKey={item.value} />
           ) : (
-            <span className="unitProperty__value">
-              {item.value.map((propText, i) => (
-                <p key={i}>{propText}</p>
-              ))}
-            </span>
+            item.value && (
+              <span className="unitProperty__value">
+                {item.value.map((propText, i) => (
+                  <p key={i}>{propText}</p>
+                ))}
+              </span>
+            )
           )}
           {item.addition ? (
             <span className="unitProperty__addition">{item.addition}</span>

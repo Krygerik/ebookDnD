@@ -7,6 +7,10 @@
   width: 200px;
 }
 
+.pageNavigation>a {
+  text-decoration: unset;
+}
+
 .pageNavigation__link {
   font-size: 22px;
   font-weight: 600;

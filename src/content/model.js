@@ -2,8 +2,9 @@ import race from "./dictionaries/race";
 import classes from "./dictionaries/classes";
 import spells from "./dictionaries/spells";
 import tables from "./dictionaries/tables";
+import introduction from "./dictionaries/introduction";
 
-const chapters = [race, classes];
+const chapters = [introduction, race, classes];
 
 const getUrlWithName = data => ({
   name: data.title,
@@ -48,5 +49,5 @@ export const getSubChapterByKey = key => {
 };
 
 export const getTableByKey = key => {
-  return tables.filter(table => table.key === key)[0].data
-}
+  return tables.filter(table => table.key === key)[0].data;
+};

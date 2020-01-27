@@ -12,35 +12,21 @@ class App extends Component {
 
     return (
       <Switch>
-        <Route
-          exact
-          path={mainNavigationPage.urlPath}
-          render={props => (
-            <NavigationPage {...props} page={mainNavigationPage} />
-          )}
-        />
+        <Route exact path={mainNavigationPage.urlPath}>
+          <NavigationPage page={mainNavigationPage} />
+        </Route>
         {allChapterData.map((chapter, index) => (
-          <Route
-            exact
-            path={chapter.urlPath}
-            key={index}
-            render={props => (
-              <NavigationPage
-                {...props}
-                page={chapter}
-                parrentUrl={mainNavigationPage.urlPath}
-              />
-            )}
-          />
+          <Route exact path={chapter.urlPath} key={index}>
+            <NavigationPage
+              page={chapter}
+              parrentUrl={mainNavigationPage.urlPath}
+            />
+          </Route>
         ))}
         {allChapterData.map((chapter, index) => (
-          <Route
-            path={`${chapter.urlPath}/:key`}
-            key={index}
-            render={props => (
-              <ContentPage {...props} parrentUrl={chapter.urlPath} />
-            )}
-          />
+          <Route path={`${chapter.urlPath}/:key`} key={index}>
+            <ContentPage parrentUrl={chapter.urlPath} />
+          </Route>
         ))}
       </Switch>
     );
