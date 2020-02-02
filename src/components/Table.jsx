@@ -1,9 +1,14 @@
-import React from "react";
-import { getTableByKey } from "../content/model";
+// @flow
+import React from 'react'
+import { getTableByKey } from '../content/model'
 
-export const Table = (props) => {
-  const { tableKey } = props;
-  const {header, body} = getTableByKey(tableKey)
+type TTable = {
+  tableKey: string,
+}
+
+export const Table = (props: TTable) => {
+  const { tableKey } = props
+  const { header, body } = getTableByKey(tableKey)
 
   return (
     <table className="table">
@@ -11,14 +16,14 @@ export const Table = (props) => {
         {header.map((row, indexRow) => (
           <tr key={indexRow}>
             {row.map((col, indexCol) => {
-              if (typeof col === "object") {
+              if (typeof col === 'object') {
                 return (
                   <th key={indexCol} {...col.attr}>
                     {col.value}
                   </th>
-                );
+                )
               } else {
-                return <th key={indexCol}>{col}</th>;
+                return <th key={indexCol}>{col}</th>
               }
             })}
           </tr>

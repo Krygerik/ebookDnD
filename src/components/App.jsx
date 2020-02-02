@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
-import { NavigationPage } from "./NavigationPage";
-import { getMainNavigation, getAllChapters } from "../content/model";
-import { ContentPage } from "./ContentPage";
-import "./App.css";
+// @flow
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import { NavigationPage } from './NavigationPage'
+import { getMainNavigation, getAllChapters } from '../content/model'
+import { ContentPage } from './ContentPage'
+import './App.css'
 
-class App extends Component {
+class App extends Component<{}> {
   render() {
-    const mainNavigationPage = getMainNavigation();
-    const allChapterData = getAllChapters();
+    const mainNavigationPage = getMainNavigation()
+    const allChapterData = getAllChapters()
 
     return (
       <Switch>
@@ -25,16 +26,16 @@ class App extends Component {
         ))}
         {allChapterData.map((chapter, index) => (
           <Route path={`${chapter.urlPath}/:key`} key={index}>
-            <ContentPage parrentUrl={
-              chapter.links.length > 1 
-                ? chapter.urlPath
-                : undefined
-            } />
+            <ContentPage
+              parrentUrl={
+                chapter.links.length > 1 ? chapter.urlPath : undefined
+              }
+            />
           </Route>
         ))}
       </Switch>
-    );
+    )
   }
 }
 
-export default App;
+export default App

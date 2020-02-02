@@ -1,18 +1,24 @@
-import React from "react";
-import { Link, Redirect } from "react-router-dom";
-import { NavigationBar } from "./NavigationBar";
-import "./NavigationPage.css";
+// @flow
+import React from 'react'
+import { Link, Redirect } from 'react-router-dom'
+import { NavigationBar } from './NavigationBar'
+import './NavigationPage.css'
 
-export const NavigationPage = props => {
-  const { title, links, isKeyNavigation, urlPath } = props.page;
-  const { parrentUrl } = props;
+type TNavigationPage = {
+  page: any,
+  parrentUrl?: string,
+}
+
+export const NavigationPage = (props: TNavigationPage) => {
+  const { title, links, isKeyNavigation, urlPath } = props.page
+  const { parrentUrl } = props
 
   if (links.length === 1) {
-    const { key, keyProperty, link } = links[0];
+    const { key, keyProperty, link } = links[0]
     if (isKeyNavigation) {
-      return <Redirect to={`${urlPath}/${key}/${keyProperty}`} />;
+      return <Redirect to={`${urlPath}/${key}/${keyProperty}`} />
     } else {
-      return <Redirect to={link} />;
+      return <Redirect to={link} />
     }
   }
 
@@ -46,5 +52,5 @@ export const NavigationPage = props => {
         <div></div>
       </footer>
     </div>
-  );
-};
+  )
+}

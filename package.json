@@ -1,11 +1,16 @@
 {
   "name": "player_ebook",
   "version": "1.0.0",
-  "description": "",
+  "description": "No description",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Krygerik/ebookDnD"
+  },
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --mode development --open --hot",
-    "docs": "webpack --config webpack.docs.config.js --mode production"
+    "docs": "webpack --config webpack.docs.config.js --mode production",
+    "eslint": "eslint src/",
+    "flow": "flow"
   },
   "author": "Maksim Zhbanov",
   "license": "ISC",
@@ -15,17 +20,43 @@
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
+    "@babel/preset-flow": "^7.8.3",
     "@babel/preset-react": "^7.7.4",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
     "file-loader": "^5.0.2",
+    "flow-bin": "^0.117.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
     "style-loader": "^1.0.2",
     "webpack": "^4.41.3",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.0"
+  },
+  "lint-staged": {
+    "./src/*.{js, jsx}": [
+      "eslint src/ --max-warnings=0"
+    ],
+    "*.{js, jsx}": [
+      "prettier --write '**/*.js' '**/*.jsx' '!docs/**'",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
