@@ -1,10 +1,15 @@
+// @flow
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { type chapterListPageType } from './chapter-list-data'
 import { Header } from './components/Header'
 import './chapter-list.scss'
 
-export const MainPage = (props: chapterListPageType) => {
+type TMainPage = {
+  mainPage: chapterListPageType,
+}
+
+export const MainPage = (props: TMainPage) => {
   const { title, url, links } = props.mainPage
 
   return (

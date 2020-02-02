@@ -1,3 +1,6 @@
+// @flow
+export const INTRODUCTION = 'introduction'
+
 type pageLinkType = {
   name: string,
   key: string,
@@ -5,7 +8,7 @@ type pageLinkType = {
 
 export type chapterListPageType = {
   title: string,
-  url: String,
+  url: string,
   links: Array<pageLinkType>,
 }
 
@@ -15,7 +18,7 @@ export const chapterListPage: chapterListPageType = {
   links: [
     {
       name: 'Введение',
-      key: '',
+      key: INTRODUCTION,
     },
     {
       name: 'Основы создания персонажа',
