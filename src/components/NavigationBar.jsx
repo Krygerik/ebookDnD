@@ -1,10 +1,15 @@
-import React from "react";
-import { getMainNavigation } from "../content/model";
-import { Link } from "react-router-dom";
+// @flow
+import React from 'react'
+import { getMainNavigation } from '../content/model'
+import { Link } from 'react-router-dom'
 
-export const NavigationBar = props => {
-  const { urlPath } = getMainNavigation();
-  const { backUrl } = props;
+type TNavigationBar = {
+  backUrl: ?string,
+}
+
+export const NavigationBar = (props: TNavigationBar) => {
+  const { urlPath } = getMainNavigation()
+  const { backUrl } = props
 
   return (
     <div className="navigationBar">
@@ -19,5 +24,5 @@ export const NavigationBar = props => {
         <div></div>
       )}
     </div>
-  );
-};
+  )
+}

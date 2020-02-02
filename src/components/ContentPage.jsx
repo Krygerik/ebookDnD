@@ -1,16 +1,21 @@
-import React from "react";
-import { useParams, useRouteMatch, Switch, Route } from "react-router-dom";
-import { getSubChapterByKey } from "../content/model";
-import { NavigationBar } from "./NavigationBar";
-import { UnitProperty } from "./UnitProperty";
-import { PageNavigation } from "./PageNavigation";
-import "./ContentPage.css";
+// @flow
+import React from 'react'
+import { useParams, useRouteMatch, Switch, Route } from 'react-router-dom'
+import { getSubChapterByKey } from '../content/model'
+import { NavigationBar } from './NavigationBar'
+import { UnitProperty } from './UnitProperty'
+import { PageNavigation } from './PageNavigation'
+import './ContentPage.css'
 
-export const ContentPage = props => {
-  const { key } = useParams();
-  let match = useRouteMatch();
-  const { name, data } = getSubChapterByKey(key);
-  const { parrentUrl } = props;
+type TContentPage = {
+  parrentUrl: ?string,
+}
+
+export const ContentPage = (props: TContentPage) => {
+  const { key } = useParams()
+  let match = useRouteMatch()
+  const { name, data } = getSubChapterByKey(key)
+  const { parrentUrl } = props
 
   return (
     <div className="page">
@@ -34,5 +39,5 @@ export const ContentPage = props => {
         <div></div>
       </footer>
     </div>
-  );
-};
+  )
+}

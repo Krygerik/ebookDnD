@@ -1,16 +1,21 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { Table } from "./Table";
-import "./UnitProperty.css";
+// @flow
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { Table } from './Table'
+import './UnitProperty.css'
 
-export const UnitProperty = props => {
-  const { unitData } = props;
-  let { propertyKey } = useParams();
+type TUnitProperty = {
+  unitData: any,
+}
+
+export const UnitProperty = (props: TUnitProperty) => {
+  const { unitData } = props
+  let { propertyKey } = useParams()
   const currentProperty = unitData.filter(
     raceProp => raceProp.key === propertyKey
-  );
+  )
 
-  const { value } = currentProperty[0];
+  const { value } = currentProperty[0]
 
   return (
     <div className="unitPropertyList">
@@ -18,7 +23,7 @@ export const UnitProperty = props => {
         <div key={index} className="unitProperty">
           <label>{item.label}</label>
           {item.image ? <img src={item.image} /> : null}
-          {item.type === "table" ? (
+          {item.type === 'table' ? (
             <Table tableKey={item.value} />
           ) : (
             item.value && (
@@ -35,5 +40,5 @@ export const UnitProperty = props => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
