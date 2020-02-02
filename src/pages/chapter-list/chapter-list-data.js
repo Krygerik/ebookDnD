@@ -1,3 +1,6 @@
+// @flow
+import { INTRODUCTION_PAGE_DATA } from '../introduction/introduction-data'
+
 type pageLinkType = {
   name: string,
   key: string,
@@ -5,7 +8,7 @@ type pageLinkType = {
 
 export type chapterListPageType = {
   title: string,
-  url: String,
+  url: string,
   links: Array<pageLinkType>,
 }
 
@@ -14,8 +17,8 @@ export const chapterListPage: chapterListPageType = {
   url: '/',
   links: [
     {
-      name: 'Введение',
-      key: '',
+      name: INTRODUCTION_PAGE_DATA.TITLE,
+      key: INTRODUCTION_PAGE_DATA.KEY,
     },
     {
       name: 'Основы создания персонажа',

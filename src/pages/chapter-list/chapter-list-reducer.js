@@ -1,12 +1,11 @@
-import { type pageType } from './chapter-list-data'
+// @flow
+import { type chapterListPageType } from './chapter-list-data'
 import { chapterListPage } from './chapter-list-data'
 
-type reduxStateType = {
-  ...pageType,
+export type chapterListStateType = {
+  ...chapterListPageType,
 }
 
-export function rootReducer(
-  state: reduxStateType = chapterListPage
-): reduxStateType {
-  return state
-}
+export const chapterListReducer = (
+  state: chapterListStateType = chapterListPage
+): chapterListStateType => state

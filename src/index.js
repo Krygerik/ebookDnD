@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { HashRouter, Switch } from 'react-router-dom'
-import { rootReducer, initialState, MainPage } from './pages/chapter-list'
+import { MainPageRoute } from './pages/chapter-list'
+import { InroductionRoute } from './pages/introduction'
+import { rootReducer } from './pages/rootReducer'
 import './pages/common.scss'
 
-const store = createStore(rootReducer, initialState)
+const store = createStore(rootReducer)
 const root = document.getElementById('root')
 
 if (root !== null) {
@@ -16,7 +18,8 @@ if (root !== null) {
       <HashRouter>
         <Fragment>
           <Switch>
-            <MainPage />
+            <MainPageRoute />
+            <InroductionRoute />
           </Switch>
         </Fragment>
       </HashRouter>
