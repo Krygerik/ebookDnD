@@ -1,13 +1,11 @@
 // @flow
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { HashRouter, Switch } from 'react-router-dom'
-import { MainPageRoute } from './pages/chapter-list'
-import { InroductionRoute } from './pages/introduction'
-import { rootReducer } from './pages/rootReducer'
-import './pages/common.scss'
+import { rootReducer } from './pages/common/rootReducer'
+import './pages/common/common.scss'
+import { MainPage } from './pages/main-page'
 
 const store = createStore(rootReducer)
 const root = document.getElementById('root')
@@ -15,14 +13,7 @@ const root = document.getElementById('root')
 if (root !== null) {
   ReactDOM.render(
     <Provider store={store}>
-      <HashRouter>
-        <Fragment>
-          <Switch>
-            <MainPageRoute />
-            <InroductionRoute />
-          </Switch>
-        </Fragment>
-      </HashRouter>
+      <MainPage />
     </Provider>,
     root
   )

@@ -12,14 +12,14 @@ type tabType = {
 
 export type pageContentDataType = {
   TITLE: string,
-  KEY: string,
+  URL: string,
   DESCRIPTION: Array<string>,
   TABS: Array<tabType>,
 }
 
 export const INTRODUCTION_PAGE_DATA: pageContentDataType = {
   TITLE: 'Введение',
-  KEY: 'introduction',
+  URL: '/introduction',
   DESCRIPTION: [
     `Это Ролевая Игра ПОДЗЕМЕЛЬЯ И ДРАКОНЫ, игра, определяющая
     жанр, и игра, у которой опыт ведения фэнтэзийных игровых

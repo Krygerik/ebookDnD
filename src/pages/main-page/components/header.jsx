@@ -1,16 +1,16 @@
+// @flow
 import React from 'react'
 
-type THeader = {
+type THeaderProps = {
   title: string,
 }
 
-export const Header = (props: THeader) => {
+export const Header = (props: THeaderProps) => {
   const { title } = props
 
   return (
     <div className="header">
       <h1>{title}</h1>
-      {/* <NavigationBar backUrl={parrentUrl} /> */}
     </div>
   )
 }

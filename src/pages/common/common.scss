@@ -7,26 +7,26 @@ body {
 .footer {
   display: flex;
   flex-grow: 0;
-  min-height: 16vh;
 }
 
 .header {
-  background: url(../assets/headerPage.png) no-repeat center center;
+  background: url(../../assets/headerPage.png) no-repeat center center;
   background-size: cover;
   flex-direction: column;
   justify-content: center;
   padding: 0 40px;
+  min-height: 6vh;
 
   h1 {
     height: min-content;
     align-self: center;
-    margin-bottom: 0;
   }
 }
 
 .footer {
-  background: url(../assets/footerPage.png) no-repeat center top;
+  background: url(../../assets/footerPage.png) no-repeat center top;
   background-size: cover;
+  min-height: 10vh;
 }
 
 .btn {
@@ -60,8 +60,6 @@ body {
   justify-content: center;
   background-color: #fbfbfb;
   width: 100%;
-  padding: 20px 0;
-
 }
 
 .pageContent {

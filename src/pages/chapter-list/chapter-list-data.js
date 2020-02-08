@@ -1,88 +1,92 @@
 // @flow
-import { INTRODUCTION_PAGE_DATA } from '../introduction/introduction-data'
+import { INTRODUCTION_PAGE_DATA, Inroduction } from '../introduction'
+
+type ReactComponentType = typeof Inroduction
 
 type pageLinkType = {
-  name: string,
-  key: string,
+  NAME: string,
+  URL: string,
+  COMPONENT?: ReactComponentType,
 }
 
 export type chapterListPageType = {
-  title: string,
-  url: string,
-  links: Array<pageLinkType>,
+  TITLE: string,
+  URL: string,
+  LINKS: Array<pageLinkType>,
 }
 
-export const chapterListPage: chapterListPageType = {
-  title: 'Содержание',
-  url: '/',
-  links: [
+export const CHAPTER_LIST_PAGE: chapterListPageType = {
+  TITLE: 'Содержание',
+  URL: '/',
+  LINKS: [
     {
-      name: INTRODUCTION_PAGE_DATA.TITLE,
-      key: INTRODUCTION_PAGE_DATA.KEY,
+      NAME: INTRODUCTION_PAGE_DATA.TITLE,
+      URL: INTRODUCTION_PAGE_DATA.URL,
+      COMPONENT: Inroduction,
     },
     {
-      name: 'Основы создания персонажа',
-      key: '',
+      NAME: 'Основы создания персонажа',
+      URL: '',
     },
     {
-      name: 'Глава 1. Параметры',
-      key: '',
+      NAME: 'Глава 1. Параметры',
+      URL: '',
     },
     {
-      name: 'Глава 2. Расы',
-      key: '',
+      NAME: 'Глава 2. Расы',
+      URL: '',
     },
     {
-      name: 'Глава 3. Классы',
-      key: '',
+      NAME: 'Глава 3. Классы',
+      URL: '',
     },
     {
-      name: 'Глава 4. Навыки',
-      key: '',
+      NAME: 'Глава 4. Навыки',
+      URL: '',
     },
     {
-      name: 'Глава 5. Отличительные черты',
-      key: '',
+      NAME: 'Глава 5. Отличительные черты',
+      URL: '',
     },
     {
-      name: 'Глава 6. Описание',
-      key: '',
+      NAME: 'Глава 6. Описание',
+      URL: '',
     },
     {
-      name: 'Глава 7. Снаряжение',
-      key: '',
+      NAME: 'Глава 7. Снаряжение',
+      URL: '',
     },
     {
-      name: 'Глава 8. Сражение',
-      key: '',
+      NAME: 'Глава 8. Сражение',
+      URL: '',
     },
     {
-      name: 'Глава 9. Авантюры',
-      key: '',
+      NAME: 'Глава 9. Авантюры',
+      URL: '',
     },
     {
-      name: 'Глава 10. Магия',
-      key: '',
+      NAME: 'Глава 10. Магия',
+      URL: '',
     },
     {
-      name: 'Глава 11. Заклинания',
-      key: '',
+      NAME: 'Глава 11. Заклинания',
+      URL: '',
     },
     {
-      name: 'Приложение: Общие справки и глоссарий',
-      key: '',
+      NAME: 'Приложение: Общие справки и глоссарий',
+      URL: '',
     },
     {
-      name: 'Индекс',
-      key: '',
+      NAME: 'Индекс',
+      URL: '',
     },
     {
-      name: 'Карточка игрока',
-      key: '',
+      NAME: 'Карточка игрока',
+      URL: '',
     },
     {
-      name: 'Список представленных в книге таблиц',
-      key: '',
+      NAME: 'Список представленных в книге таблиц',
+      URL: '',
     },
   ],
 }

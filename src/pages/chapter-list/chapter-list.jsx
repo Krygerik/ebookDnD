@@ -1,32 +1,40 @@
 // @flow
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { type chapterListPageType } from './chapter-list-data'
-import { Header } from './components/Header'
 import './chapter-list.scss'
 
 type TMainPage = {
   mainPage: chapterListPageType,
+  changeHeader: string => any,
 }
 
 export const MainPage = (props: TMainPage) => {
-  const { title, url, links } = props.mainPage
+  const { mainPage, changeHeader } = props
+  console.log('render mainpage')
 
   return (
-    <Route exac path={url}>
-      <div className="page">
-        <Header title={title} />
-        <div className="pageBody">
-          <div className="pageContent">
-            {links.map((link, index) => (
-              <a className="link" key={index}>
-                {link.name} {!link.key ? '(TODO)' : null}
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="footer"></div>
-      </div>
-    </Route>
+    <div className="pageContent">
+      {mainPage.LINKS.map((link, index) => {
+        if (link.URL) {
+          return (
+            <Link
+              onClick={() => changeHeader(link.NAME)}
+              className="link"
+              key={index}
+              to={link.URL}
+            >
+              {link.NAME}
+            </Link>
+          )
+        } else {
+          return (
+            <span className="link" key={index}>
+              {link.NAME} (TODO)
+            </span>
+          )
+        }
+      })}
+    </div>
   )
 }
