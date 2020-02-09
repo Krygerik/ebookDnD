@@ -1,7 +1,7 @@
 // @flow
 type paragraphType = {
   LABEL?: string,
-  VALUE?: string | Array<string>,
+  VALUE?: Array<string>,
 }
 
 type tabType = {
