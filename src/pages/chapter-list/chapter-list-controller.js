@@ -1,12 +1,17 @@
 // @flow
 import React from 'react'
 import { connect } from 'react-redux'
-import { MainPage } from './chapter-list'
-import { setHeader } from '../main-page/components'
+import { ChapterList } from './chapter-list'
+import { setHeader } from '../../components/header'
 
-const MainPageContainer = (props: any) => {
+const ChapterListContainer = (props: any) => {
   const { chapterListPage, changeHeader } = props
-  return <MainPage mainPage={chapterListPage} changeHeader={changeHeader} />
+  return (
+    <ChapterList
+      chapterListPage={chapterListPage}
+      changeHeader={changeHeader}
+    />
+  )
 }
 
 const mapStateToProps = store => {
@@ -19,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
   changeHeader: newHeader => dispatch(setHeader(newHeader)),
 })
 
-export const MainPageController = connect(
+export const ChapterListController = connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainPageContainer)
+)(ChapterListContainer)

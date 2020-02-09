@@ -2,7 +2,7 @@
 import React from 'react'
 import { HashRouter, Switch } from 'react-router-dom'
 import { RouteList } from '../route-list/route-list'
-import { Header } from './components'
+import { Header } from '../../components/header'
 
 export const MainPage = () => {
   return (

@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom'
 import { type chapterListPageType } from './chapter-list-data'
 import './chapter-list.scss'
 
-type TMainPage = {
-  mainPage: chapterListPageType,
+type TChapterListProps = {
+  chapterListPage: chapterListPageType,
   changeHeader: string => any,
 }
 
-export const MainPage = (props: TMainPage) => {
-  const { mainPage, changeHeader } = props
+export const ChapterList = (props: TChapterListProps) => {
+  const { chapterListPage, changeHeader } = props
   console.log('render mainpage')
 
   return (
     <div className="pageContent">
-      {mainPage.LINKS.map((link, index) => {
+      {chapterListPage.LINKS.map((link, index) => {
         if (link.URL) {
           return (
             <Link
