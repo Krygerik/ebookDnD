@@ -10,14 +10,14 @@ type tabType = {
   PARAGRAPHS: Array<paragraphType>,
 }
 
-export type pageContentDataType = {
+export type pageContentType = {
   TITLE: string,
   URL: string,
   DESCRIPTION: Array<string>,
   TABS: Array<tabType>,
 }
 
-export const INTRODUCTION_PAGE_DATA: pageContentDataType = {
+export const INTRODUCTION_PAGE_DATA: pageContentType = {
   TITLE: 'Введение',
   URL: '/introduction',
   DESCRIPTION: [

@@ -11,10 +11,10 @@ type TChapterListProps = {
 
 export const ChapterList = (props: TChapterListProps) => {
   const { chapterListPage, changeHeader } = props
-  console.log('render mainpage')
+  console.log('render chapterList')
 
   return (
-    <div className="pageContent">
+    <div className="navigationContent">
       {chapterListPage.LINKS.map((link, index) => {
         if (link.URL) {
           return (

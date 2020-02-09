@@ -1,9 +1,9 @@
 // @flow
-import type { pageContentDataType } from './introduction-data'
+import type { pageContentType } from './introduction-data'
 import { INTRODUCTION_PAGE_DATA } from './introduction-data'
 
 type introductionState = {
-  ...pageContentDataType,
+  ...pageContentType,
 }
 
 export const introductionReducer = (

@@ -66,8 +66,14 @@ body {
   width: 100%;
 }
 
-.pageContent {
+.navigationContent {
   padding: 0 30px;
   display: flex;
   flex-direction: column;
+}
+
+.pageContent {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
 }

@@ -2,10 +2,10 @@
 import React from 'react'
 import { Introduction } from './introduction'
 import { connect } from 'react-redux'
-import type { pageContentDataType } from './introduction-data'
+import type { pageContentType } from './introduction-data'
 
 type TInroductionContainer = {
-  intoductionPage: pageContentDataType,
+  intoductionPage: pageContentType,
 }
 
 const InroductionContainer = (props: TInroductionContainer) => {
