@@ -1,7 +1,7 @@
 // @flow
-import { chapterListReducer } from '../chapter-list'
-import { introductionReducer } from '../introduction'
-import { headerReducer } from '../../components/header'
+import { chapterListReducer } from '../pages/chapter-list'
+import { introductionReducer } from '../pages/introduction'
+import { headerReducer } from '../components/header'
 import { combineReducers } from 'redux'
 
 export const rootReducer = combineReducers({

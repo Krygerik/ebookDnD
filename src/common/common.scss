@@ -10,12 +10,16 @@ body {
 }
 
 .header {
-  background: url(../../assets/headerPage.png) no-repeat center center;
+  background: url(../assets/headerPage.png) no-repeat center bottom;
   background-size: cover;
   flex-direction: column;
   justify-content: center;
   padding: 0 40px;
   min-height: 6vh;
+
+  @media (min-width: 900px) {
+    min-height: 13vh;
+  }
 
   h1 {
     height: min-content;
@@ -24,7 +28,7 @@ body {
 }
 
 .footer {
-  background: url(../../assets/footerPage.png) no-repeat center top;
+  background: url(../assets/footerPage.png) no-repeat center top;
   background-size: cover;
   min-height: 10vh;
 }
@@ -41,7 +45,7 @@ body {
 
 .link {
   color: blue;
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
   text-align: center;
   line-height: 2em;
