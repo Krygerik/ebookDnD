@@ -6,8 +6,17 @@
   border-right: 2px solid #e1c7ac;
 
   .navigationTabs__item {
+    text-decoration-line: none;
     padding: 10px 20px;
     margin: 0;
+
+    &.active {
+      background: lightgrey;
+    }
+
+    &:hover {
+      background: bisque;
+    }
   }
 }
 
@@ -16,4 +25,26 @@
   font-size: 19px;
   text-align: center;
   padding: 0 30px;
+}
+
+.tab-info {
+  width: calc(100% - 200px);
+  font-size: 19px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.paragraph {
+  margin-bottom: 5px;
+
+  .paragraph__label {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .paragraph__value {
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }

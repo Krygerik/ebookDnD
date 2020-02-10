@@ -6,15 +6,14 @@ import './introduction.scss'
 
 type TIntroduction = {
   pageContent: pageContentType,
-  isNavigation: boolean,
-  tabKey: string,
+  tabKey?: string,
 }
 
 export const Introduction = (props: TIntroduction) => {
-  const { pageContent, isNavigation, tabKey } = props
+  const { pageContent, tabKey } = props
   console.log('render intropage')
 
-  if (isNavigation) {
+  if (!tabKey) {
     return (
       <div className="pageContent">
         <div className="navigationTabs">
@@ -53,15 +52,17 @@ export const Introduction = (props: TIntroduction) => {
         </div>
         <div className="tab-info">
           {pageContent.TABS.filter(tab => tab.TAB_KEY === tabKey).map(tab =>
-            tab.PARAGRAPHS.map(
-              paraghrap =>
-                paraghrap.VALUE &&
-                paraghrap.VALUE.map((value, i) => (
-                  <p key={i} className="paraghraph__value">
-                    {value}
-                  </p>
-                ))
-            )
+            tab.PARAGRAPHS.map((paraghrap, key) => (
+              <div className="paragraph" key={key}>
+                <div className="paragraph__label">{paraghrap.LABEL}</div>
+                {paraghrap.VALUE &&
+                  paraghrap.VALUE.map((value, i) => (
+                    <p key={i} className="paragraph__value">
+                      {value}
+                    </p>
+                  ))}
+              </div>
+            ))
           )}
         </div>
       </div>
