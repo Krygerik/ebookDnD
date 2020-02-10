@@ -1,5 +1,6 @@
 // @flow
 import { INTRODUCTION_PAGE_DATA, Inroduction } from '../introduction'
+import { PARAMETERS_PAGE, Parameters } from '../parameters'
 
 type ReactComponentType = typeof Inroduction
 
@@ -29,8 +30,9 @@ export const CHAPTER_LIST_PAGE: chapterListPageType = {
       URL: '',
     },
     {
-      NAME: 'Глава 1. Параметры',
-      URL: '',
+      NAME: PARAMETERS_PAGE.TITLE,
+      URL: PARAMETERS_PAGE.URL,
+      COMPONENT: Parameters,
     },
     {
       NAME: 'Глава 2. Расы',
