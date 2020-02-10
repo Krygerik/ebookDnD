@@ -1,7 +1,9 @@
 // @flow
 import React from 'react'
-import type { pageContentType } from './introduction-data'
 import { Link } from 'react-router-dom'
+import type { pageContentType } from './introduction-data'
+import { DEFAULT, TABLE } from './introduction-data'
+import { Table } from '../../tables'
 import './introduction.scss'
 
 type TIntroduction = {
@@ -52,17 +54,24 @@ export const Introduction = (props: TIntroduction) => {
         </div>
         <div className="tab-info">
           {pageContent.TABS.filter(tab => tab.TAB_KEY === tabKey).map(tab =>
-            tab.PARAGRAPHS.map((paraghrap, key) => (
-              <div className="paragraph" key={key}>
-                <div className="paragraph__label">{paraghrap.LABEL}</div>
-                {paraghrap.VALUE &&
-                  paraghrap.VALUE.map((value, i) => (
-                    <p key={i} className="paragraph__value">
-                      {value}
-                    </p>
-                  ))}
-              </div>
-            ))
+            tab.PARAGRAPHS.map((paraghrap, key) => {
+              if (paraghrap.TYPE === DEFAULT) {
+                return (
+                  <div className="paragraph" key={key}>
+                    <div className="paragraph__label">{paraghrap.LABEL}</div>
+                    {paraghrap.VALUE &&
+                      paraghrap.VALUE.map((value, i) => (
+                        <p key={i} className="paragraph__value">
+                          {value}
+                        </p>
+                      ))}
+                  </div>
+                )
+              }
+              if (paraghrap.TYPE === TABLE) {
+                return <Table key={key} tableKey={paraghrap.KEY} />
+              }
+            })
           )}
         </div>
       </div>
