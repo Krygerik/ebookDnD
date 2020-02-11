@@ -1,3 +1,6 @@
+export const DEFAULT = 'default'
+export const TABLE = 'table'
+
 type TCompositeHeaderCell = {
   value: string,
   attr: Object,

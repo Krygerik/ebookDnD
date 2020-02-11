@@ -1,7 +1,7 @@
 // @flow
 import type { pageContentType } from '../introduction'
 import { TABLES } from '../../tables'
-import { DEFAULT, TABLE } from '../introduction'
+import { DEFAULT, TABLE } from '../../tables'
 
 export const KEY_TABLE_MODIFY_PARAMS_AND_BONUS_SPELLS = TABLES[0].KEY
 

@@ -1,7 +1,5 @@
 // @flow
-export const DEFAULT = 'default'
-export const TABLE = 'table'
-
+import { DEFAULT } from '../../tables'
 type paragraphType = {
   TYPE: 'default',
   LABEL?: string,

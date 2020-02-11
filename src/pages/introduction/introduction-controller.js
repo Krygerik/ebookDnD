@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { connect } from 'react-redux'
-import { Introduction } from './introduction'
+import { Content } from '../../components/content'
 import { type pageContentType } from './introduction-data'
 
 type TInroductionContainer = {
@@ -12,9 +12,7 @@ type TInroductionContainer = {
 const InroductionContainer = (props: TInroductionContainer) => {
   const { intoductionPage, match } = props
 
-  return (
-    <Introduction pageContent={intoductionPage} tabKey={match.params.tabKey} />
-  )
+  return <Content content={intoductionPage} tabKey={match.params.tabKey} />
 }
 
 const mapStateToProps = store => {
