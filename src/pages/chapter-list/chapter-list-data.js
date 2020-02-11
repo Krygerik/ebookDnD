@@ -1,13 +1,12 @@
 // @flow
-import { INTRODUCTION_PAGE_DATA, Inroduction } from '../introduction'
+import { INTRODUCTION_PAGE, Inroduction } from '../introduction'
+import { BASES_OF_CREATION, BasesOfCreation } from '../bases-of-creation'
 import { PARAMETERS_PAGE, Parameters } from '../parameters'
-
-type ReactComponentType = typeof Inroduction
 
 type pageLinkType = {
   NAME: string,
   URL: string,
-  COMPONENT?: ReactComponentType,
+  COMPONENT?: any,
 }
 
 export type chapterListPageType = {
@@ -21,13 +20,14 @@ export const CHAPTER_LIST_PAGE: chapterListPageType = {
   URL: '/',
   LINKS: [
     {
-      NAME: INTRODUCTION_PAGE_DATA.TITLE,
-      URL: INTRODUCTION_PAGE_DATA.URL,
+      NAME: INTRODUCTION_PAGE.TITLE,
+      URL: INTRODUCTION_PAGE.URL,
       COMPONENT: Inroduction,
     },
     {
-      NAME: 'Основы создания персонажа',
-      URL: '',
+      NAME: BASES_OF_CREATION.TITLE,
+      URL: BASES_OF_CREATION.URL,
+      COMPONENT: BasesOfCreation,
     },
     {
       NAME: PARAMETERS_PAGE.TITLE,

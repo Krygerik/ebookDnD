@@ -11,7 +11,6 @@ type TChapterListProps = {
 
 export const ChapterList = (props: TChapterListProps) => {
   const { chapterListPage, changeHeader } = props
-  console.log('render chapterList')
 
   return (
     <div className="navigationContent">

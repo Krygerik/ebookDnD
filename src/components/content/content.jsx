@@ -1,6 +1,7 @@
+// @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import type { pageContentType } from '../../pages/introduction'
+import type { pageContentType } from './content-type'
 import { TabInfo } from '../tab-info'
 import './content.scss'
 

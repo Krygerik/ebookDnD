@@ -1,11 +1,7 @@
 // @flow
-import type { pageContentType } from './introduction-data'
-import { INTRODUCTION_PAGE_DATA } from './introduction-data'
-
-type introductionState = {
-  ...pageContentType,
-}
+import { type pageContentType } from '../../components/content'
+import { INTRODUCTION_PAGE } from './introduction-data'
 
 export const introductionReducer = (
-  state: introductionState = INTRODUCTION_PAGE_DATA
-): introductionState => state
+  state: pageContentType = INTRODUCTION_PAGE
+): pageContentType => state

@@ -1,30 +1,8 @@
 // @flow
 import { DEFAULT } from '../../tables'
-type paragraphType = {
-  TYPE: 'default',
-  LABEL?: string,
-  VALUE?: Array<string>,
-}
+import type { pageContentType } from '../../components/content'
 
-type tableKeyType = {
-  TYPE: 'table',
-  KEY: string,
-}
-
-type tabType = {
-  NAME: string,
-  TAB_KEY: string,
-  PARAGRAPHS: Array<paragraphType | tableKeyType>,
-}
-
-export type pageContentType = {
-  TITLE: string,
-  URL: string,
-  DESCRIPTION: Array<string>,
-  TABS: Array<tabType>,
-}
-
-export const INTRODUCTION_PAGE_DATA: pageContentType = {
+export const INTRODUCTION_PAGE: pageContentType = {
   TITLE: 'Введение',
   URL: '/introduction',
   DESCRIPTION: [

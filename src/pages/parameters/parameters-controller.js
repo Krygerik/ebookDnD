@@ -1,8 +1,10 @@
 // @flow
 import React from 'react'
 import { connect } from 'react-redux'
+import { type pageContentType } from '../../components/content'
 import { Content } from '../../components/content'
-import { type pageContentType } from '../introduction'
+import { withTabRouter } from '../../common/withTabRouter'
+import { PARAMETERS_PAGE } from './parameters-data'
 
 type TParametersContainer = {
   parametersPage: pageContentType,
@@ -21,6 +23,9 @@ const mapStateToProps = store => {
   }
 }
 
-export const ParametersController = connect(mapStateToProps)(
-  ParametersContainer
+const ParametersController = connect(mapStateToProps)(ParametersContainer)
+
+export const ParametersWithTabRouter = withTabRouter(
+  ParametersController,
+  PARAMETERS_PAGE.URL
 )

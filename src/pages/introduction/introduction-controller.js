@@ -2,7 +2,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Content } from '../../components/content'
-import { type pageContentType } from './introduction-data'
+import { type pageContentType } from '../../components/content'
+import { withTabRouter } from '../../common/withTabRouter'
+import { INTRODUCTION_PAGE } from './introduction-data'
 
 type TInroductionContainer = {
   intoductionPage: pageContentType,
@@ -21,6 +23,9 @@ const mapStateToProps = store => {
   }
 }
 
-export const InroductionController = connect(mapStateToProps)(
-  InroductionContainer
+const InroductionController = connect(mapStateToProps)(InroductionContainer)
+
+export const IntroductionWithRouter = withTabRouter(
+  InroductionController,
+  INTRODUCTION_PAGE.URL
 )
