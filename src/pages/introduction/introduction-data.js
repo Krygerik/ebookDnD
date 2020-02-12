@@ -1,10 +1,10 @@
 // @flow
-import { DEFAULT } from '@/tables'
-import type { pageContentType } from '@/components/content'
+import type { pageContentType } from '@/components/page'
 
 export const INTRODUCTION_PAGE: pageContentType = {
   TITLE: 'Введение',
   URL: '/introduction',
+  isNavigationPage: false,
   DESCRIPTION: [
     `Это Ролевая Игра ПОДЗЕМЕЛЬЯ И ДРАКОНЫ, игра, определяющая
     жанр, и игра, у которой опыт ведения фэнтэзийных игровых
@@ -28,7 +28,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'game-dnd',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Игра D&D фантазийное воплощение вашего воображения.
                 Она - частично действие, частично повествование истории,
@@ -67,7 +67,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'three-dimensions',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Игра ПОДЗЕМЕЛЬЯ&ДРАКОНЫ – игра воображения, но это и также
                 игра тактики и стратегии. Фигурки и поле боя наиболее лучше
@@ -88,7 +88,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'characters',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `В тех приключениях, где вы играете, ваш персонаж является
                 звездой, как и герои книг или фильмов. Будучи игроком,
@@ -109,7 +109,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'why-updates',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Впервые новая игра ДРАКОНЫ&ПОДЗЕМЕЛЬЯ стартовала
                 в 2000 году. За три прошедших года, система d20
@@ -156,7 +156,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'adventures',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Ваш персонаж является авантюристом, героем, отправившимся
                 на эпические задания в поиске удачи и славы. К вашим
@@ -198,7 +198,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'game-process',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `ПОДЗЕМЕЛЬЯ&ДРАКОНЫ использует базовую механику, которая
                 охватывает все действия в игре. Это основное правило
@@ -206,7 +206,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Механика ядра',
           VALUE: [
             `Когда вы пытаетесь провести
@@ -230,7 +230,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'rules',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Важно',
           VALUE: [
             `Чтобы играть в эту игру вам не нужно запоминать всю
@@ -255,11 +255,11 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'need-to-play',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Чтобы играть в D&D вашей группе понадобятся',
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '1',
           VALUE: [
             `Руководство Игрока, Руководство Мастера
@@ -269,7 +269,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '2',
           VALUE: [
             `Копия карточки игрока, которая расположена в конце
@@ -277,7 +277,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '3',
           VALUE: [
             `Поле боя. Содержится в Руководстве Мастера
@@ -285,7 +285,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '4',
           VALUE: [
             `Фигурки, чтобы отображать каждого персонажа и
@@ -293,7 +293,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '5',
           VALUE: [
             `Комплект кубиков для каждого игрока. В комплект
@@ -304,7 +304,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '6',
           VALUE: [
             `Карандаши, черновая бумага, листы в клетку, чтобы вести
@@ -314,12 +314,12 @@ export const INTRODUCTION_PAGE: pageContentType = {
       ],
     },
     {
-      TYPE: DEFAULT,
+      isTable: false,
       NAME: 'Кубик',
       TAB_KEY: 'cube',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Правила сокращений для записи бросков кубиков,
                 например «3d4+3», означает, что нужно бросить 3
@@ -332,7 +332,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '1d8',
           VALUE: [
             `Один восьмигранный кубик (выбрасывается число
@@ -340,7 +340,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '1d8+2',
           VALUE: [
             `Один восьмигранник плюс 2 (3-10). Это
@@ -349,7 +349,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: '2d4+2',
           VALUE: [
             `Два четырёхгранника плюс 2 (4-10). Это количество
@@ -358,7 +358,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'd%',
           VALUE: [
             `Ещё называемый «процентник». Бросая два
@@ -373,7 +373,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Важно',
           VALUE: [
             `Не каждое действие требует броска кубика.
@@ -395,7 +395,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'what-can-do',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Персонаж может попытаться выполнить все то, что пришло в
                 его воображение, естественно если оно вписывается в рамки
@@ -409,7 +409,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Проверки Навыков',
           VALUE: [
             `Чтобы выполнить проверку навыка, бросьте d20 и добавьте
@@ -426,7 +426,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Проверки Параметров',
           VALUE: [
             `Проверки параметров выполнятся если у персонажа
@@ -441,7 +441,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Броски Атаки',
           VALUE: [
             `Для атаки оппонента проведите бросок d20, и добавьте
@@ -470,7 +470,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'battle-round',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Сражение разыгрывается по раундам. Каждый раунд в
                 игровом мире представляет 6 секунд, вне зависимости от
@@ -494,7 +494,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'player-role',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Как игрок, вы используете эту книгу для создания и управления
                 своего персонажа. Ваш персонаж является авантюристом,

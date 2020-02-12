@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-  background: url(../assets/headerPage.png) no-repeat center bottom;
+  background: url(./assets/headerPage.png) no-repeat center bottom;
   background-size: cover;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .footer {
-  background: url(../assets/footerPage.png) no-repeat center top;
+  background: url(./assets/footerPage.png) no-repeat center top;
   background-size: cover;
   min-height: 10vh;
 }

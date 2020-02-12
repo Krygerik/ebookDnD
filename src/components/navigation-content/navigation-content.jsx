@@ -1,27 +1,17 @@
 // @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import type { navigationListPageType } from './navigation-content-controller'
+import type { pageLinkType } from '../page'
 
-type TNavigationContentProps = {
-  contentPage: navigationListPageType,
-  changeHeader: Function,
-}
-
-export const NavigationContent = (props: TNavigationContentProps) => {
-  const { contentPage, changeHeader } = props
+export const NavigationContent = (props: { links: Array<pageLinkType> }) => {
+  const { links } = props
 
   return (
     <div className="navigationContent">
-      {contentPage.LINKS.map((link, index) => {
+      {links.map((link, index) => {
         if (link.URL) {
           return (
-            <Link
-              onClick={() => changeHeader(link.NAME)}
-              className="link"
-              key={index}
-              to={link.URL}
-            >
+            <Link className="link" key={index} to={link.URL}>
               {link.NAME}
             </Link>
           )

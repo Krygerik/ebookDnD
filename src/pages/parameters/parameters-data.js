@@ -1,6 +1,6 @@
 // @flow
-import { type pageContentType } from '@/components/content'
-import { DEFAULT, TABLE, TABLES } from '@/tables'
+import { type pageContentType } from '@/components/page'
+import { TABLES } from '@/tables'
 
 const MODIFY_PARAMS_AND_BONUS_SPELLS_TABLE = TABLES[0].KEY
 const AVERAGE_POWER_PARAMS_TABLE = TABLES[1].KEY
@@ -13,6 +13,7 @@ const AVERAGE_CHARM_PARAMS_TABLE = TABLES[6].KEY
 export const PARAMETERS_PAGE: pageContentType = {
   TITLE: 'Глава 1. Параметры',
   URL: '/parameters',
+  isNavigationPage: false,
   DESCRIPTION: [
     `Каждый произведенный бросок кубика
         модифицирован вместе с параметрами вашего
@@ -42,7 +43,7 @@ export const PARAMETERS_PAGE: pageContentType = {
       TAB_KEY: 'params-indicators',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Для того, что бы получить параметр для вашего персонажа,
                 бросьте четыре шестигранных кубика (4d6). Отбрасывайте
@@ -67,7 +68,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Модификаторы параметров',
           VALUE: [
             `Каждый параметр, после выбора расы, будет изменяться
@@ -90,7 +91,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Параметры и заклинатели',
           VALUE: [
             `Параметры от которых зависят ваши бонусные
@@ -117,11 +118,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: MODIFY_PARAMS_AND_BONUS_SPELLS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Перебрасывание',
           VALUE: [
             `Если ваши показатели слишком низкие, вы можете отказаться
@@ -139,7 +140,7 @@ export const PARAMETERS_PAGE: pageContentType = {
       TAB_KEY: 'params',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Каждый параметр, частично описывает вашего персонажа, и
                 воздействует на все его игровые действия.`,
@@ -159,7 +160,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'СИЛА (СИЛА)',
           VALUE: [
             `Сила показывает, насколько у вашего персонажа развита
@@ -171,7 +172,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Модификатор Силы применяется в следующих ситуациях:',
           VALUE: [
             `• При бросках рукопашных атак`,
@@ -189,11 +190,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_POWER_PARAMS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'ЛОВКОСТЬ (ЛОВК)',
           VALUE: [
             `Ловкость определяет координацию, проворность, рефлексы
@@ -205,7 +206,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: `Модификатор Ловкости применяется в следующих ситуациях:`,
           VALUE: [
             `• Стрелковые атаки, включая атаки из: луков, арбалетов,
@@ -223,11 +224,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_AGILITY_PARAMS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'ТЕЛОСЛОЖЕНИЕ (ТЕЛО)',
           VALUE: [
             `Телосложение представляет здоровье персонажа и его
@@ -236,7 +237,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: `Модификатор Телосложения применяется в следующих
           ситуациях:`,
           VALUE: [
@@ -254,11 +255,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_BODIES_PARAMS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'ИНТЕЛЛЕКТ (ИНТЛ)',
           VALUE: [
             `Интеллект определяет насколько ваш персонаж образован и
@@ -270,7 +271,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Модификатор Интеллекта применяется в следующих ситуациях:',
           VALUE: [
             `• Число языков, которыми может владеть ваш персонаж
@@ -290,11 +291,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_INTELLIGENCE_PARAMS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'МУДРОСТЬ (МУДР)',
           VALUE: [
             `Мудрость показывает силу воли персонажа, его общие
@@ -314,7 +315,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Модификатор Мудрости применяется в следующих ситуациях:',
           VALUE: [
             `• Спас-броски Воли (для отражения очарование персоны и подобные заклинания).`,
@@ -329,11 +330,11 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_WISDOM_PARAMS_TABLE,
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'ОБАЯНИЕ (ОБН)',
           VALUE: [
             `Обаяние измеряет силу личности персонажа, его убедительность,
@@ -346,7 +347,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
+          isTable: false,
           LABEL: 'Модификатор Обаяния применяется в следующих ситуациях:',
           VALUE: [
             `• Актерство, Блеф, Дипломатия, Маскировка, Сбор
@@ -364,7 +365,7 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: TABLE,
+          isTable: true,
           KEY: AVERAGE_CHARM_PARAMS_TABLE,
         },
       ],
@@ -374,7 +375,7 @@ export const PARAMETERS_PAGE: pageContentType = {
       TAB_KEY: 'example',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Монте хочет создать нового персонажа. Он бросил четыре
                 шестигранника (4d6), они показали 5, 4, 4 и 1. Не принимая
@@ -418,7 +419,7 @@ export const PARAMETERS_PAGE: pageContentType = {
       TAB_KEY: 'change-params',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Время от времени параметры вашего персонажа будут,
                 изменятся. Параметры могут неограниченно подниматься.
@@ -479,7 +480,7 @@ export const PARAMETERS_PAGE: pageContentType = {
       TAB_KEY: 'int-wisd-charm',
       PARAGRAPHS: [
         {
-          TYPE: DEFAULT,
+          isTable: false,
           VALUE: [
             `Как, средство для хорошего отыгрывания своего персонажа,
                 вы можете использовать свои показатели Интеллекта, Мудрости и Обаяния.

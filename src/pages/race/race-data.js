@@ -1,10 +1,11 @@
 // @flow
-import type { navigationListPageType } from '@/components/navigation-content'
+import type { navigationListPageType } from '@/components/page'
 import { ChoseRace, CHOSE_RACE_PAGE } from './children-page/chose-race'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
   URL: '/race',
+  isNavigationPage: false,
   DESCRIPTION: [
     `Союзники эльфов, и сами эльфы считают
         своим домом Эльфийские леса. Вы не найдете

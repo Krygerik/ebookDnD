@@ -1,2 +1,2 @@
-export type { navigationListPageType } from './navigation-content-controller'
-export { NavigationContentController as NavigationContent } from './navigation-content-controller'
+// @flow
+export { NavigationContent } from './navigation-content'

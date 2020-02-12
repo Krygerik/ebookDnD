@@ -1,6 +1,3 @@
-export const DEFAULT = 'default'
-export const TABLE = 'table'
-
 type TCompositeHeaderCell = {
   value: string,
   attr: Object,
@@ -18,7 +15,7 @@ export type TTableData = {
   body: Array<Array<string>>,
 }
 
-export type tableType = {
+type tableType = {
   KEY: string,
   NAME: string,
   DATA: TTableDataWithCompositeHeader | TTableData,
