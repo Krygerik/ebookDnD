@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { HashRouter, Switch } from 'react-router-dom'
-import { RouteList } from '../route-list/route-list'
+import { ChapterList } from '../chapter-list'
 import { Header } from '../../components/header'
 
 export const MainPage = () => {
@@ -11,7 +11,7 @@ export const MainPage = () => {
       <div className="pageBody">
         <HashRouter>
           <Switch>
-            <RouteList />
+            <ChapterList />
           </Switch>
         </HashRouter>
       </div>

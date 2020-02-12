@@ -2,22 +2,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { ChapterList } from './chapter-list'
+import { CHAPTER_LIST_PAGE } from './chapter-list-data'
 import { setHeader } from '../../components/header'
 
 const ChapterListContainer = (props: any) => {
-  const { chapterListPage, changeHeader } = props
+  const { changeHeader } = props
+
   return (
     <ChapterList
-      chapterListPage={chapterListPage}
+      chapterListPage={CHAPTER_LIST_PAGE}
       changeHeader={changeHeader}
     />
   )
-}
-
-const mapStateToProps = store => {
-  return {
-    chapterListPage: store.chapterListPage,
-  }
 }
 
 const mapDispatchToProps = dispatch => ({
@@ -25,6 +21,6 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export const ChapterListController = connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ChapterListContainer)

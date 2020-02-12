@@ -1,12 +1,13 @@
 .tab__table {
+  margin-bottom: 10px;
   align-items: center;
   display: flex;
   flex-direction: column;
 
   .tab__table-label {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
   }
 }
 
@@ -20,7 +21,7 @@
       text-align: center;
     }
   }
-  
+
   .table__body {
     font-size: 20px;
 
@@ -34,4 +35,3 @@
     }
   }
 }
-
