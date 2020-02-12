@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import { HashRouter, Switch } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { ChapterList } from '../chapter-list'
 import { Header } from '../../components/header'
 
@@ -10,9 +10,7 @@ export const MainPage = () => {
       <Header />
       <div className="pageBody">
         <HashRouter>
-          <Switch>
-            <ChapterList />
-          </Switch>
+          <ChapterList />
         </HashRouter>
       </div>
       <div className="footer"></div>

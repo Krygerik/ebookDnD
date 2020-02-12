@@ -1,5 +1,5 @@
 // @flow
-import type { navigationListPageType } from '../chapter-list'
+import type { navigationListPageType } from '../../components/navigation-content'
 import { ChoseRace, CHOSE_RACE_PAGE } from './children-page/chose-race'
 
 export const RACE_LIST_PAGE: navigationListPageType = {

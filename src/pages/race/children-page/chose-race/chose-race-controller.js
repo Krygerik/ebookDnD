@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Content } from '../../../../components/content'
-import { withTabRouter } from '../../../../common/withTabRouter'
+import { withTabRouter } from '../../../../wrappers/withTabRouter'
 import { CHOSE_RACE_PAGE } from './chose-race-data'
 
 const ChoseRaceContainer = (props: { match: { params: Object } }) => {

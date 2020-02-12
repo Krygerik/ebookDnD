@@ -1,26 +1,14 @@
 // @flow
 import React from 'react'
-import { connect } from 'react-redux'
-import { ChapterList } from './chapter-list'
+import { NavigationContent } from '../../components/navigation-content'
 import { CHAPTER_LIST_PAGE } from './chapter-list-data'
-import { setHeader } from '../../components/header'
+import { withNavigationRouter } from '../../wrappers/withNavigationRouter'
 
-const ChapterListContainer = (props: any) => {
-  const { changeHeader } = props
+const ChapterListController = () => (
+  <NavigationContent contentPage={CHAPTER_LIST_PAGE} />
+)
 
-  return (
-    <ChapterList
-      chapterListPage={CHAPTER_LIST_PAGE}
-      changeHeader={changeHeader}
-    />
-  )
-}
-
-const mapDispatchToProps = dispatch => ({
-  changeHeader: newHeader => dispatch(setHeader(newHeader)),
-})
-
-export const ChapterListController = connect(
-  null,
-  mapDispatchToProps
-)(ChapterListContainer)
+export const ChapterListWithNavRouter = withNavigationRouter(
+  ChapterListController,
+  CHAPTER_LIST_PAGE
+)

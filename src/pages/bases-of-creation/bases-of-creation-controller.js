@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Content } from '../../components/content'
-import { withTabRouter } from '../../common/withTabRouter'
+import { withTabRouter } from '../../wrappers/withTabRouter'
 import { BASES_OF_CREATION } from './bases-of-creation-data'
 
 const BasesOfCreationContainer = (props: { match: { params: Object } }) => {

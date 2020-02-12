@@ -1,19 +1,19 @@
 // @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import type { navigationListPageType } from '../chapter-list'
+import type { navigationListPageType } from './navigation-content-controller'
 
-type TRaceListProps = {
-  raceListPage: navigationListPageType,
-  changeHeader: string => any,
+type TNavigationContentProps = {
+  contentPage: navigationListPageType,
+  changeHeader: Function,
 }
 
-export const RaceList = (props: TRaceListProps) => {
-  const { raceListPage, changeHeader } = props
+export const NavigationContent = (props: TNavigationContentProps) => {
+  const { contentPage, changeHeader } = props
 
   return (
     <div className="navigationContent">
-      {raceListPage.LINKS.map((link, index) => {
+      {contentPage.LINKS.map((link, index) => {
         if (link.URL) {
           return (
             <Link

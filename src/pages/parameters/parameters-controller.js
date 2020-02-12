@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Content } from '../../components/content'
-import { withTabRouter } from '../../common/withTabRouter'
+import { withTabRouter } from '../../wrappers/withTabRouter'
 import { PARAMETERS_PAGE } from './parameters-data'
 
 const ParametersContainer = (props: { match: { params: Object } }) => {

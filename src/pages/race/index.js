@@ -1,3 +1,3 @@
 // @flow
-export { RaceRouter as Racelist } from './race-router'
+export { RaceListwithNavigationRouter as Racelist } from './race-controller'
 export { RACE_LIST_PAGE } from './race-data'
