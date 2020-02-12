@@ -2,7 +2,13 @@
 import { type pageContentType } from '../../components/content'
 import { DEFAULT, TABLE, TABLES } from '../../tables'
 
-export const KEY_TABLE_MODIFY_PARAMS_AND_BONUS_SPELLS = TABLES[0].KEY
+const MODIFY_PARAMS_AND_BONUS_SPELLS_TABLE = TABLES[0].KEY
+const AVERAGE_POWER_PARAMS_TABLE = TABLES[1].KEY
+const AVERAGE_AGILITY_PARAMS_TABLE = TABLES[2].KEY
+const AVERAGE_BODIES_PARAMS_TABLE = TABLES[3].KEY
+const AVERAGE_INTELLIGENCE_PARAMS_TABLE = TABLES[4].KEY
+const AVERAGE_WISDOM_PARAMS_TABLE = TABLES[5].KEY
+const AVERAGE_CHARM_PARAMS_TABLE = TABLES[6].KEY
 
 export const PARAMETERS_PAGE: pageContentType = {
   TITLE: 'Параметры',
@@ -112,7 +118,7 @@ export const PARAMETERS_PAGE: pageContentType = {
         },
         {
           TYPE: TABLE,
-          KEY: KEY_TABLE_MODIFY_PARAMS_AND_BONUS_SPELLS,
+          KEY: MODIFY_PARAMS_AND_BONUS_SPELLS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -183,9 +189,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели силы',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_POWER_PARAMS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -218,9 +223,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели ловкости',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_AGILITY_PARAMS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -250,9 +254,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели телосложения',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_BODIES_PARAMS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -287,9 +290,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели интеллекта',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_INTELLIGENCE_PARAMS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -327,9 +329,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели мудрости',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_WISDOM_PARAMS_TABLE,
         },
         {
           TYPE: DEFAULT,
@@ -363,9 +364,8 @@ export const PARAMETERS_PAGE: pageContentType = {
           ],
         },
         {
-          TYPE: DEFAULT,
-          LABEL: 'Средние показатели обаяния',
-          VALUE: ['TODO TABLE'],
+          TYPE: TABLE,
+          KEY: AVERAGE_CHARM_PARAMS_TABLE,
         },
       ],
     },
