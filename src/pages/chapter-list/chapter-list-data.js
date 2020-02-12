@@ -2,6 +2,7 @@
 import { INTRODUCTION_PAGE, Inroduction } from '../introduction'
 import { BASES_OF_CREATION, BasesOfCreation } from '../bases-of-creation'
 import { PARAMETERS_PAGE, Parameters } from '../parameters'
+import { RACE_LIST_PAGE, Racelist } from '../race'
 
 type pageLinkType = {
   NAME: string,
@@ -9,13 +10,13 @@ type pageLinkType = {
   COMPONENT?: any,
 }
 
-export type chapterListPageType = {
+export type navigationListPageType = {
   TITLE: string,
   URL: string,
   LINKS: Array<pageLinkType>,
 }
 
-export const CHAPTER_LIST_PAGE: chapterListPageType = {
+export const CHAPTER_LIST_PAGE: navigationListPageType = {
   TITLE: 'Содержание',
   URL: '/',
   LINKS: [
@@ -35,8 +36,9 @@ export const CHAPTER_LIST_PAGE: chapterListPageType = {
       COMPONENT: Parameters,
     },
     {
-      NAME: 'Глава 2. Расы',
-      URL: '',
+      NAME: RACE_LIST_PAGE.TITLE,
+      URL: RACE_LIST_PAGE.URL,
+      COMPONENT: Racelist,
     },
     {
       NAME: 'Глава 3. Классы',

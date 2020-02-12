@@ -11,7 +11,7 @@ const AVERAGE_WISDOM_PARAMS_TABLE = TABLES[5].KEY
 const AVERAGE_CHARM_PARAMS_TABLE = TABLES[6].KEY
 
 export const PARAMETERS_PAGE: pageContentType = {
-  TITLE: 'Параметры',
+  TITLE: 'Глава 1. Параметры',
   URL: '/parameters',
   DESCRIPTION: [
     `Каждый произведенный бросок кубика
