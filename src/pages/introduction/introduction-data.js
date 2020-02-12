@@ -1,6 +1,6 @@
 // @flow
-import { DEFAULT } from '../../tables'
-import type { pageContentType } from '../../components/content'
+import { DEFAULT } from '@/tables'
+import type { pageContentType } from '@/components/content'
 
 export const INTRODUCTION_PAGE: pageContentType = {
   TITLE: 'Введение',

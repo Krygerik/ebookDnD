@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
-import { Content } from '../../components/content'
-import { withTabRouter } from '../../wrappers/withTabRouter'
+import { Content } from '@/components/content'
+import { withTabRouter } from '@/wrappers/withTabRouter'
 import { INTRODUCTION_PAGE } from './introduction-data'
 
 const InroductionContainer = (props: { match: { params: Object } }) => {

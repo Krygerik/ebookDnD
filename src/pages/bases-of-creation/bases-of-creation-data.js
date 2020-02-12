@@ -1,6 +1,6 @@
 // @flow
-import type { pageContentType } from '../../components/content'
-import { DEFAULT } from '../../tables'
+import type { pageContentType } from '@/components/content'
+import { DEFAULT } from '@/tables'
 
 export const BASES_OF_CREATION: pageContentType = {
   TITLE: 'Основы создания персонажа',

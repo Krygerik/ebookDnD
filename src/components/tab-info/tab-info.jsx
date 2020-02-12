@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEFAULT, TABLE, Table } from '../../tables'
+import { DEFAULT, TABLE, Table } from '@/tables'
 import './tab-info.scss'
 
 type TTabInfo = {

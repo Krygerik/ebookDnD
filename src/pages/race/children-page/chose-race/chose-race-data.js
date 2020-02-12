@@ -1,5 +1,5 @@
 // @flow
-import { type pageContentType } from '../../../../components/content'
+import { type pageContentType } from '@/components/content'
 
 export const CHOSE_RACE_PAGE: pageContentType = {
   TITLE: 'Выбор расы',

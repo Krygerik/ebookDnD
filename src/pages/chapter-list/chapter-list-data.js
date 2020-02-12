@@ -3,7 +3,7 @@ import { INTRODUCTION_PAGE, Inroduction } from '../introduction'
 import { BASES_OF_CREATION, BasesOfCreation } from '../bases-of-creation'
 import { PARAMETERS_PAGE, Parameters } from '../parameters'
 import { RACE_LIST_PAGE, Racelist } from '../race'
-import type { navigationListPageType } from '../../components/navigation-content'
+import type { navigationListPageType } from '@/components/navigation-content'
 
 export const CHAPTER_LIST_PAGE: navigationListPageType = {
   TITLE: 'Содержание',

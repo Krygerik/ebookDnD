@@ -1,6 +1,6 @@
 // @flow
-import { type pageContentType } from '../../components/content'
-import { DEFAULT, TABLE, TABLES } from '../../tables'
+import { type pageContentType } from '@/components/content'
+import { DEFAULT, TABLE, TABLES } from '@/tables'
 
 const MODIFY_PARAMS_AND_BONUS_SPELLS_TABLE = TABLES[0].KEY
 const AVERAGE_POWER_PARAMS_TABLE = TABLES[1].KEY

@@ -2,6 +2,7 @@
 
 [include]
 src/**/*.js
+src/**/*.jsx
 
 [libs]
 
@@ -14,5 +15,5 @@ module.file_ext=.jsx
 module.file_ext=.json
 module.file_ext=.css
 module.file_ext=.scss
-
+module.name_mapper='^@' ->'<PROJECT_ROOT>/src/'
 [strict]

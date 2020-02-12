@@ -1,5 +1,5 @@
 // @flow
-import { CHAPTER_LIST_PAGE } from '../../pages/chapter-list'
+import { CHAPTER_LIST_PAGE } from '@/pages/chapter-list'
 import { SET_HEADER, type TSetHeaderAction } from './header-actions'
 
 type headerStateType = {
