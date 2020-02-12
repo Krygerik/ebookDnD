@@ -9,11 +9,7 @@ export const RaceRouter = () => {
     <Switch>
       <Route exact path={RACE_LIST_PAGE.URL} component={RaceListController} />
       {RACE_LIST_PAGE.LINKS.map((child, index) => (
-        <Route
-          key={index}
-          path={RACE_LIST_PAGE.URL + child.URL}
-          component={child.COMPONENT}
-        />
+        <Route key={index} path={child.URL} component={child.COMPONENT} />
       ))}
     </Switch>
   )

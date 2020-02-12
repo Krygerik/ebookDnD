@@ -20,5 +20,5 @@ export type pageContentType = {
   TITLE: string,
   URL: string,
   DESCRIPTION: Array<string>,
-  TABS: Array<tabType>,
+  TABS?: Array<tabType>,
 }

@@ -1,5 +1,6 @@
 // @flow
 import type { navigationListPageType } from '../chapter-list'
+import { ChoseRace, CHOSE_RACE_PAGE } from './children-page/chose-race'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -19,8 +20,9 @@ export const RACE_LIST_PAGE: navigationListPageType = {
   ],
   LINKS: [
     {
-      NAME: 'Выбор расы',
-      URL: '',
+      NAME: CHOSE_RACE_PAGE.TITLE,
+      URL: CHOSE_RACE_PAGE.URL,
+      COMPONENT: ChoseRace,
     },
     {
       NAME: 'Рассовые характеристики',
