@@ -7,11 +7,11 @@ import type { navigationListPageType, pageContentType } from './page-type'
 
 type TPage = {
   content: navigationListPageType | pageContentType,
-  tabkey?: string,
+  tabKey?: string,
 }
 
 export const Page = (props: TPage) => {
-  const { content, tabkey } = props
+  const { content, tabKey } = props
 
   return (
     <div className="page">
@@ -20,7 +20,7 @@ export const Page = (props: TPage) => {
         {content.isNavigationPage ? (
           <NavigationContent links={content.LINKS} />
         ) : (
-          <Content content={content} tabKey={tabkey} />
+          <Content content={content} tabKey={tabKey} />
         )}
       </div>
       <div className="footer"></div>
