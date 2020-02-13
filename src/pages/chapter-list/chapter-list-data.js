@@ -12,76 +12,20 @@ export const CHAPTER_LIST_PAGE: navigationListPageType = {
   isNavigationPage: true,
   LINKS: [
     {
-      NAME: INTRODUCTION_PAGE.TITLE,
-      URL: INTRODUCTION_PAGE.URL,
+      DATA: INTRODUCTION_PAGE,
       COMPONENT: Inroduction,
     },
     {
-      NAME: BASES_OF_CREATION.TITLE,
-      URL: BASES_OF_CREATION.URL,
+      DATA: BASES_OF_CREATION,
       COMPONENT: BasesOfCreation,
     },
     {
-      NAME: PARAMETERS_PAGE.TITLE,
-      URL: PARAMETERS_PAGE.URL,
+      DATA: PARAMETERS_PAGE,
       COMPONENT: Parameters,
     },
     {
-      NAME: RACE_LIST_PAGE.TITLE,
-      URL: RACE_LIST_PAGE.URL,
+      DATA: RACE_LIST_PAGE,
       COMPONENT: Racelist,
-    },
-    {
-      NAME: 'Глава 3. Классы',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 4. Навыки',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 5. Отличительные черты',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 6. Описание',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 7. Снаряжение',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 8. Сражение',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 9. Авантюры',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 10. Магия',
-      URL: '',
-    },
-    {
-      NAME: 'Глава 11. Заклинания',
-      URL: '',
-    },
-    {
-      NAME: 'Приложение: Общие справки и глоссарий',
-      URL: '',
-    },
-    {
-      NAME: 'Индекс',
-      URL: '',
-    },
-    {
-      NAME: 'Карточка игрока',
-      URL: '',
-    },
-    {
-      NAME: 'Список представленных в книге таблиц',
-      URL: '',
     },
   ],
 }

@@ -1,10 +1,4 @@
 // @flow
-export type pageLinkType = {
-  NAME: string,
-  URL: string,
-  COMPONENT?: any,
-}
-
 export type navigationListPageType = {
   TITLE: string,
   URL: string,
@@ -37,4 +31,9 @@ export type pageContentType = {
   parentUrl: string,
   DESCRIPTION: Array<string>,
   TABS?: Array<tabType>,
+}
+
+export type pageLinkType = {
+  DATA: navigationListPageType | pageContentType,
+  COMPONENT?: any,
 }

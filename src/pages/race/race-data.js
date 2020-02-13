@@ -22,45 +22,8 @@ export const RACE_LIST_PAGE: navigationListPageType = {
   ],
   LINKS: [
     {
-      NAME: CHOSE_RACE_PAGE.TITLE,
-      URL: CHOSE_RACE_PAGE.URL,
+      DATA: CHOSE_RACE_PAGE,
       COMPONENT: ChoseRace,
-    },
-    {
-      NAME: 'Рассовые характеристики',
-      URL: '',
-    },
-    {
-      NAME: 'Человек',
-      URL: '',
-    },
-    {
-      NAME: 'Гномы',
-      URL: '',
-    },
-    {
-      NAME: 'Дварфы / Карлики',
-      URL: '',
-    },
-    {
-      NAME: 'Полуорки',
-      URL: '',
-    },
-    {
-      NAME: 'Полуэльфы',
-      URL: '',
-    },
-    {
-      NAME: 'Халфлинги',
-      URL: '',
-    },
-    {
-      NAME: 'Эльфы',
-      URL: '',
-    },
-    {
-      NAME: 'Маленькие персонажи',
-      URL: '',
     },
   ],
 }
