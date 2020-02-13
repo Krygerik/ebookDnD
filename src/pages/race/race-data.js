@@ -1,6 +1,7 @@
 // @flow
 import type { navigationListPageType } from '@/components/page'
 import { ChoseRace, CHOSE_RACE_PAGE } from './children-page/chose-race'
+import { RaceParams, RACE_PARAMS_PAGE } from './children-page/race-params'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -24,6 +25,10 @@ export const RACE_LIST_PAGE: navigationListPageType = {
     {
       DATA: CHOSE_RACE_PAGE,
       COMPONENT: ChoseRace,
+    },
+    {
+      DATA: RACE_PARAMS_PAGE,
+      COMPONENT: RaceParams,
     },
   ],
 }
