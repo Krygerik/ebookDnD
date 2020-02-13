@@ -16,7 +16,7 @@ export const Page = (props: TPage) => {
 
   return (
     <div className="page">
-      <Header title={content.TITLE} />
+      <Header title={content.TITLE} parentUrl={content.parentUrl} />
       <div className="pageBody">
         {content.isNavigationPage ? (
           <NavigationContent links={content.LINKS} />

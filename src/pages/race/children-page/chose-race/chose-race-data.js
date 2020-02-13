@@ -5,6 +5,7 @@ export const CHOSE_RACE_PAGE: pageContentType = {
   TITLE: 'Выбор расы',
   URL: '/race/chose-race',
   isNavigationPage: false,
+  parentUrl: '/race',
   DESCRIPTION: [
     `После того как вы набросали свои показатели параметров, прежде чем записать их в карточку игрока, выберите
         вашу расу. В это же время вы выбираете его или её класс,

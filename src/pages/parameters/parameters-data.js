@@ -14,6 +14,7 @@ export const PARAMETERS_PAGE: pageContentType = {
   TITLE: 'Глава 1. Параметры',
   URL: '/parameters',
   isNavigationPage: false,
+  parentUrl: '/',
   DESCRIPTION: [
     `Каждый произведенный бросок кубика
         модифицирован вместе с параметрами вашего

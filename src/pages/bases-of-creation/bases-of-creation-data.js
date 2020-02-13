@@ -4,6 +4,7 @@ import type { pageContentType } from '@/components/page'
 export const BASES_OF_CREATION: pageContentType = {
   TITLE: 'Основы создания персонажа',
   URL: '/bases-of-creation-char',
+  parentUrl: '/',
   isNavigationPage: false,
   DESCRIPTION: [
     `Просмотрите с 1 по 5 Главы, а затем следуя этим шагам создайте

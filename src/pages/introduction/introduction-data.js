@@ -5,6 +5,7 @@ export const INTRODUCTION_PAGE: pageContentType = {
   TITLE: 'Введение',
   URL: '/introduction',
   isNavigationPage: false,
+  parentUrl: '/',
   DESCRIPTION: [
     `Это Ролевая Игра ПОДЗЕМЕЛЬЯ И ДРАКОНЫ, игра, определяющая
     жанр, и игра, у которой опыт ведения фэнтэзийных игровых

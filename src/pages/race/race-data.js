@@ -6,6 +6,7 @@ export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
   URL: '/race',
   isNavigationPage: true,
+  parentUrl: '/',
   DESCRIPTION: [
     `Союзники эльфов, и сами эльфы считают
         своим домом Эльфийские леса. Вы не найдете
