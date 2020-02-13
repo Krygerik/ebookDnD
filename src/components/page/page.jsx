@@ -4,6 +4,7 @@ import { Header } from '../header'
 import { Content } from '../content'
 import { NavigationContent } from '../navigation-content'
 import type { navigationListPageType, pageContentType } from './page-type'
+import './page.scss'
 
 type TPage = {
   content: navigationListPageType | pageContentType,
