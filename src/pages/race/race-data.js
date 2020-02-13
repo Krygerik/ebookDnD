@@ -2,6 +2,8 @@
 import type { navigationListPageType } from '@/components/page'
 import { ChoseRace, CHOSE_RACE_PAGE } from './children-page/chose-race'
 import { RaceParams, RACE_PARAMS_PAGE } from './children-page/race-params'
+import { HumanPage, HUMAN_PAGE } from './children-page/human'
+import { GnomePage, GNOME_PAGE } from './children-page/gnome'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -29,6 +31,14 @@ export const RACE_LIST_PAGE: navigationListPageType = {
     {
       DATA: RACE_PARAMS_PAGE,
       COMPONENT: RaceParams,
+    },
+    {
+      DATA: HUMAN_PAGE,
+      COMPONENT: HumanPage,
+    },
+    {
+      DATA: GNOME_PAGE,
+      COMPONENT: GnomePage,
     },
   ],
 }
