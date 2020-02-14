@@ -4,6 +4,7 @@ export type navigationListPageType = {
   URL: string,
   isNavigationPage: true,
   parentUrl: string,
+  image?: Array<string>,
   LINKS: Array<pageLinkType>,
 }
 
@@ -30,6 +31,7 @@ export type pageContentType = {
   isNavigationPage: false,
   parentUrl: string,
   DESCRIPTION: Array<string>,
+  image?: Array<string>,
   TABS?: Array<tabType>,
 }
 

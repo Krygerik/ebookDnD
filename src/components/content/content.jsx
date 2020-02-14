@@ -12,7 +12,7 @@ type TContent = {
 
 export const Content = (props: TContent) => {
   const { content, tabKey } = props
-  const { TABS, URL, DESCRIPTION } = content
+  const { TABS, URL, DESCRIPTION, image } = content
 
   return (
     <div className="pageContent">
@@ -35,6 +35,7 @@ export const Content = (props: TContent) => {
         TABS && <TabInfo tabs={TABS} tabKey={tabKey} />
       ) : (
         <div className={`description ${TABS ? 'with-tabs' : ''}`}>
+          {image && image.map((img, i) => <img src={img} key={i} />)}
           {DESCRIPTION.map((item, index) => (
             <p key={index}>{item}</p>
           ))}

@@ -1,5 +1,7 @@
 // @flow
 import type { pageContentType } from '@/components/page'
+import race_mans from '@/assets/race_mans.png'
+import race_womans from '@/assets/race_womans.png'
 
 export const CHOSE_RACE_PAGE: pageContentType = {
   TITLE: 'Выбор расы',
@@ -25,4 +27,5 @@ export const CHOSE_RACE_PAGE: pageContentType = {
         расы не ограничивает вашу фантазию от детализации вашего
         персонажа`,
   ],
+  image: [race_mans, race_womans],
 }

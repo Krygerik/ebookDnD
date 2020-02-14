@@ -19,7 +19,11 @@ export const Page = (props: TPage) => {
       <Header title={content.TITLE} parentUrl={content.parentUrl} />
       <div className="pageBody">
         {content.isNavigationPage ? (
-          <NavigationContent links={content.LINKS} />
+          <NavigationContent
+            links={content.LINKS}
+            description={content.DESCRIPTION}
+            image={content.image}
+          />
         ) : (
           <Content content={content} tabKey={tabKey} />
         )}
