@@ -1,5 +1,6 @@
 // @flow
 import type { pageContentType } from '@/components/page'
+import { RACIAL_PARAMETER_MODIFIERS_TABLE } from '@/tables'
 
 export const RACE_PARAMS_PAGE: pageContentType = {
   TITLE: 'Рассовые характеристики',
@@ -51,8 +52,8 @@ export const RACE_PARAMS_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
-          VALUE: [`TODO TABLES 2-1`],
+          isTable: true,
+          KEY: RACIAL_PARAMETER_MODIFIERS_TABLE,
         },
       ],
     },

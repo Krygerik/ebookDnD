@@ -1,24 +1,26 @@
+// @flow
 type TCompositeHeaderCell = {
   value: string,
-  attr: Object,
+  attr?: Object,
 }
 
 type TTableDataWithCompositeHeader = {
   isCompositeHeader: true,
-  header: Array<Array<TCompositeHeaderCell | string>>,
+  header: Array<Array<TCompositeHeaderCell>>,
   body: Array<Array<string>>,
 }
 
-export type TTableData = {
+type TTableData = {
   isCompositeHeader: false,
   header: Array<Array<string>>,
   body: Array<Array<string>>,
 }
 
-type tableType = {
+export type tableType = {
   KEY: string,
   NAME: string,
   DATA: TTableDataWithCompositeHeader | TTableData,
+  addition?: Array<string>,
 }
 
 export const TABLES: Array<tableType> = [
@@ -48,7 +50,18 @@ export const TABLES: Array<tableType> = [
             },
           },
         ],
-        ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        [
+          { value: '0' },
+          { value: '1' },
+          { value: '2' },
+          { value: '3' },
+          { value: '4' },
+          { value: '5' },
+          { value: '6' },
+          { value: '7' },
+          { value: '8' },
+          { value: '9' },
+        ],
       ],
       body: [
         ['1', '-5', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
@@ -211,5 +224,26 @@ export const TABLES: Array<tableType> = [
         ['Великий вирм золотого дракона', '30-31', '+11'],
       ],
     },
+  },
+  {
+    KEY: 'table 2-1',
+    NAME: 'Расовые модификаторы параметров',
+    DATA: {
+      isCompositeHeader: false,
+      header: [['Раса', 'Модификатор параметра', 'Желаемый класс']],
+      body: [
+        ['Гном', '+2 Телосложение, –2 Сила', 'Бард'],
+        ['Дварф', '+2 Телосложение, –2 Обаяние', 'Воин'],
+        ['Полуорк', '+2 Сила, –2 Интеллект(*), -2 Обаяние', 'Варвар'],
+        ['Полуэльф', 'Нет', 'Любой'],
+        ['Халфлинг', '+2 Ловкость, -2 Сила', 'Вор'],
+        ['Человек', 'Нет', 'Любой'],
+        ['Эльф', '+2 Ловкость, -2 Телосложение', 'Маг'],
+      ],
+    },
+    addition: [
+      `*: Минимальный стартовый показатель Интеллект Полуорка
+      3. Если модификатор снижает Интеллект до 1 или 2, его конечный счет всё равно будет 3.`,
+    ],
   },
 ]
