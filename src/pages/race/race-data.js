@@ -5,6 +5,7 @@ import { RaceParams, RACE_PARAMS_PAGE } from './children-page/race-params'
 import { HumanPage, HUMAN_PAGE } from './children-page/human'
 import { GnomePage, GNOME_PAGE } from './children-page/gnome'
 import { DwarfPage, DWARF_PAGE } from './children-page/dwarf'
+import { HalfOrcPage, HALF_ORC_PAGE } from './children-page/half-orc'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -44,6 +45,10 @@ export const RACE_LIST_PAGE: navigationListPageType = {
     {
       DATA: DWARF_PAGE,
       COMPONENT: DwarfPage,
+    },
+    {
+      DATA: HALF_ORC_PAGE,
+      COMPONENT: HalfOrcPage,
     },
   ],
 }
