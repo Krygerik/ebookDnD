@@ -9,6 +9,10 @@ import { HalfOrcPage, HALF_ORC_PAGE } from './children-page/half-orc'
 import { HalfElfPage, HALF_ELF_PAGE } from './children-page/half-elf'
 import { HalflingPage, HALFLING_PAGE } from './children-page/halfling'
 import { ElfPage, ELF_PAGE } from './children-page/elf'
+import {
+  SmallCharactersPage,
+  SMALL_CHARACTERS_PAGE,
+} from './children-page/small-characters'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -64,6 +68,10 @@ export const RACE_LIST_PAGE: navigationListPageType = {
     {
       DATA: ELF_PAGE,
       COMPONENT: ElfPage,
+    },
+    {
+      DATA: SMALL_CHARACTERS_PAGE,
+      COMPONENT: SmallCharactersPage,
     },
   ],
 }
