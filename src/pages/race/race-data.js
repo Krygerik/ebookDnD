@@ -8,6 +8,7 @@ import { DwarfPage, DWARF_PAGE } from './children-page/dwarf'
 import { HalfOrcPage, HALF_ORC_PAGE } from './children-page/half-orc'
 import { HalfElfPage, HALF_ELF_PAGE } from './children-page/half-elf'
 import { HalflingPage, HALFLING_PAGE } from './children-page/halfling'
+import { ElfPage, ELF_PAGE } from './children-page/elf'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -59,6 +60,10 @@ export const RACE_LIST_PAGE: navigationListPageType = {
     {
       DATA: HALFLING_PAGE,
       COMPONENT: HalflingPage,
+    },
+    {
+      DATA: ELF_PAGE,
+      COMPONENT: ElfPage,
     },
   ],
 }
