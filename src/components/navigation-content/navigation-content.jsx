@@ -6,11 +6,11 @@ import type { pageLinkType } from '../page'
 export const NavigationContent = (props: {
   links: Array<pageLinkType>,
   description?: Array<string>,
-  image?: string,
+  image?: Array<string>,
 }) => (
   <div className="navigationContent">
     {props.image && props.image.map((img, i) => <img src={img} key={i} />)}
-    {props.description && (
+    {props.description && props.description.length && (
       <div className={`description`}>
         {props.description.map((item, index) => (
           <p key={index}>{item}</p>

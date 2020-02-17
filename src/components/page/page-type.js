@@ -6,11 +6,13 @@ export type navigationListPageType = {
   parentUrl: string,
   image?: Array<string>,
   LINKS: Array<pageLinkType>,
+  DESCRIPTION?: Array<string>,
 }
 
 type paragraphType = {
   isTable: false,
   LABEL?: string,
+  image?: string,
   VALUE?: Array<string>,
 }
 
