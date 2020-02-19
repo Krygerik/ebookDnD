@@ -2,6 +2,7 @@
 import type { navigationListPageType } from '@/components/page'
 import { ChoseRace, CLASSES_PAGE } from './children-page/classes-tab'
 import { Bonuses, BONUSES_PAGE } from './children-page/bonuses'
+import { Advantages, ADVANTAGES_PAGE } from './children-page/advantages'
 
 export const CLASSES_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 3. Классы',
@@ -35,6 +36,10 @@ export const CLASSES_LIST_PAGE: navigationListPageType = {
     {
       DATA: BONUSES_PAGE,
       COMPONENT: Bonuses,
+    },
+    {
+      DATA: ADVANTAGES_PAGE,
+      COMPONENT: Advantages,
     },
   ],
 }
