@@ -27,12 +27,17 @@ export type tabType = {
   PARAGRAPHS: Array<paragraphType | tableType>,
 }
 
+type descriptionPageType = {
+  LABEL?: string,
+  VALUE?: Array<string>,
+}
+
 export type pageContentType = {
   TITLE: string,
   URL: string,
   isNavigationPage: false,
   parentUrl: string,
-  DESCRIPTION: Array<string>,
+  DESCRIPTION: Array<descriptionPageType>,
   image?: Array<string>,
   TABS?: Array<tabType>,
 }

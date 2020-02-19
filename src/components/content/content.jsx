@@ -36,8 +36,18 @@ export const Content = (props: TContent) => {
       ) : (
         <div className={`description ${TABS ? 'with-tabs' : ''}`}>
           {image && image.map((img, i) => <img src={img} key={i} />)}
-          {DESCRIPTION.map((item, index) => (
-            <p key={index}>{item}</p>
+          {DESCRIPTION.map((desc, index) => (
+            <div className="paragraph" key={index}>
+              {desc.LABEL && (
+                <div className="paragraph__label">{desc.LABEL}</div>
+              )}
+              {desc.VALUE &&
+                desc.VALUE.map((descValue, i) => (
+                  <div className="paragraph__value" key={i}>
+                    {descValue}
+                  </div>
+                ))}
+            </div>
           ))}
         </div>
       )}

@@ -8,8 +8,11 @@ export const RACE_PARAMS_PAGE: pageContentType = {
   isNavigationPage: false,
   parentUrl: '/race',
   DESCRIPTION: [
-    `Раса вашего персонажа определяется некоторыми его или её
-        особенностями.`,
+    {
+      VALUE: [
+        `Раса вашего персонажа определяется некоторыми его или её особенностями`,
+      ],
+    },
   ],
   TABS: [
     {
