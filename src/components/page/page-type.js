@@ -28,6 +28,7 @@ export type tabType = {
 }
 
 type descriptionPageType = {
+  isTable?: false,
   LABEL?: string,
   VALUE?: Array<string>,
 }
@@ -37,7 +38,7 @@ export type pageContentType = {
   URL: string,
   isNavigationPage: false,
   parentUrl: string,
-  DESCRIPTION: Array<descriptionPageType>,
+  DESCRIPTION: Array<descriptionPageType | tableType>,
   image?: Array<string>,
   TABS?: Array<tabType>,
 }
