@@ -8,11 +8,11 @@ export const Table = (props: { tableData: tableType }) => {
 
   return (
     <div className="tab__table">
-      <div className="tab__table-label">{NAME}</div>
+      {NAME && <div className="tab__table-label">{NAME}</div>}
       <table className="table">
         <thead className="table__head">
-          {DATA.isCompositeHeader
-            ? DATA.header.map((row, indexRow) => (
+          {DATA.header.isComposite
+            ? DATA.header.value.map((row, indexRow) => (
                 <tr key={indexRow}>
                   {row.map((col, indexCol) => (
                     <th key={indexCol} {...col.attr}>
@@ -21,7 +21,7 @@ export const Table = (props: { tableData: tableType }) => {
                   ))}
                 </tr>
               ))
-            : DATA.header.map((row, indexRow) => (
+            : DATA.header.value.map((row, indexRow) => (
                 <tr key={indexRow}>
                   {row.map((col, indexCol) => (
                     <th key={indexCol}>{col}</th>

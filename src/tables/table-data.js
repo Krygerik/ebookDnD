@@ -1,25 +1,21 @@
 // @flow
-type TCompositeHeaderCell = {
-  value: string,
-  attr?: Object,
+type defaultCellType = {
+  isComposite?: false,
+  value: Array<Array<string>>,
 }
 
-type TTableDataWithCompositeHeader = {
-  isCompositeHeader: true,
-  header: Array<Array<TCompositeHeaderCell>>,
-  body: Array<Array<string>>,
-}
-
-type TTableData = {
-  isCompositeHeader?: false,
-  header: Array<Array<string>>,
-  body: Array<Array<string>>,
+type compositeCellType = {
+  isComposite: true,
+  value: Array<Array<{ value: string, attr?: any }>>,
 }
 
 export type tableType = {
   KEY: string,
-  NAME: string,
-  DATA: TTableDataWithCompositeHeader | TTableData,
+  NAME?: string,
+  DATA: {
+    header: compositeCellType | defaultCellType,
+    body: any,
+  },
   addition?: Array<string>,
 }
 
@@ -28,41 +24,43 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-1',
     NAME: 'Таблица 1-1: Модификаторы параметров и бонусные заклинания',
     DATA: {
-      isCompositeHeader: true,
-      header: [
-        [
-          {
-            value: 'Показатель',
-            attr: {
-              rowSpan: 2,
+      header: {
+        isComposite: true,
+        value: [
+          [
+            {
+              value: 'Показатель',
+              attr: {
+                rowSpan: 2,
+              },
             },
-          },
-          {
-            value: 'Модификатор',
-            attr: {
-              rowSpan: 2,
+            {
+              value: 'Модификатор',
+              attr: {
+                rowSpan: 2,
+              },
             },
-          },
-          {
-            value: 'Бонусные заклинания (По уровню заклинаний)',
-            attr: {
-              colSpan: 10,
+            {
+              value: 'Бонусные заклинания (По уровню заклинаний)',
+              attr: {
+                colSpan: 10,
+              },
             },
-          },
+          ],
+          [
+            { value: '0' },
+            { value: '1' },
+            { value: '2' },
+            { value: '3' },
+            { value: '4' },
+            { value: '5' },
+            { value: '6' },
+            { value: '7' },
+            { value: '8' },
+            { value: '9' },
+          ],
         ],
-        [
-          { value: '0' },
-          { value: '1' },
-          { value: '2' },
-          { value: '3' },
-          { value: '4' },
-          { value: '5' },
-          { value: '6' },
-          { value: '7' },
-          { value: '8' },
-          { value: '9' },
-        ],
-      ],
+      },
       body: [
         ['1', '-5', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
         ['2-3', '-4', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
@@ -87,8 +85,9 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-2',
     NAME: 'Средние Показатели Силы',
     DATA: {
-      isCompositeHeader: false,
-      header: [['Раса или Существо', 'Средняя Сила', 'Средний Модификатор']],
+      header: {
+        value: [['Раса или Существо', 'Средняя Сила', 'Средний Модификатор']],
+      },
       body: [
         ['Аллип, волшебный огонек, тень', '-', '-'],
         ['Архон светлячок, летучая мышь, жаба', '1', '-5'],
@@ -112,10 +111,11 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-3',
     NAME: 'Средние Показатели Ловкости',
     DATA: {
-      isCompositeHeader: false,
-      header: [
-        ['Раса или Существо', 'Средняя Ловкость', 'Средний Модификатор'],
-      ],
+      header: {
+        value: [
+          ['Раса или Существо', 'Средняя Ловкость', 'Средний Модификатор'],
+        ],
+      },
       body: [
         ['Визгун (гриб)', '-', '-'],
         ['Желатиновый куб (слизь)', '1', '-5'],
@@ -136,10 +136,11 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-4',
     NAME: 'Средние Показатели Телосложения',
     DATA: {
-      isCompositeHeader: false,
-      header: [
-        ['Раса или Существо', 'Среднee Телосложениe', 'Средний Модификатор'],
-      ],
+      header: {
+        value: [
+          ['Раса или Существо', 'Среднee Телосложениe', 'Средний Модификатор'],
+        ],
+      },
       body: [
         ['Мумия, тень, упырь', '-', '-'],
         ['Рой саранчи, рой сороконожек', '8-9', '-1'],
@@ -157,10 +158,11 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-5',
     NAME: 'Средние Показатели Интеллекта',
     DATA: {
-      isCompositeHeader: false,
-      header: [
-        ['Раса или Существо', 'Средний Интеллект', 'Средний Модификатор'],
-      ],
+      header: {
+        value: [
+          ['Раса или Существо', 'Средний Интеллект', 'Средний Модификатор'],
+        ],
+      },
       body: [
         ['Голем, зомби, охровое желе', '-', '-'],
         ['Верблюд, карабкающийся падальщик, пурпурный червь', '1', '-5'],
@@ -183,10 +185,11 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-6',
     NAME: 'Средние Показатели Мудрости',
     DATA: {
-      isCompositeHeader: false,
-      header: [
-        ['Раса или Существо', 'Средняя Мудрость', 'Средний Модификатор'],
-      ],
+      header: {
+        value: [
+          ['Раса или Существо', 'Средняя Мудрость', 'Средний Модификатор'],
+        ],
+      },
       body: [
         ['Желатиновый куб (слизь), оживленный объект', '1', '-5'],
         ['Визгун (гриб)', '2', '-4'],
@@ -206,8 +209,11 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 1-7',
     NAME: 'Средние Показатели Обаяния',
     DATA: {
-      isCompositeHeader: false,
-      header: [['Раса или Существо', 'Среднее Обаяние', 'Средний Модификатор']],
+      header: {
+        value: [
+          ['Раса или Существо', 'Среднее Обаяние', 'Средний Модификатор'],
+        ],
+      },
       body: [
         ['Визгун (гриб), голем, зомби', '1', '-5'],
         ['Крокодил, носорог, паук, ящерица', '2', '-4'],
@@ -229,8 +235,9 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 2-1',
     NAME: 'Расовые модификаторы параметров',
     DATA: {
-      isCompositeHeader: false,
-      header: [['Раса', 'Модификатор параметра', 'Желаемый класс']],
+      header: {
+        value: [['Раса', 'Модификатор параметра', 'Желаемый класс']],
+      },
       body: [
         ['Гном', '+2 Телосложение, –2 Сила', 'Бард'],
         ['Дварф', '+2 Телосложение, –2 Обаяние', 'Воин'],
@@ -250,16 +257,18 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 3-1',
     NAME: 'Таблица 3-1: Базовые бонусы спасбросков и атак',
     DATA: {
-      header: [
-        [
-          'Уровень класса',
-          'Базовый бонус',
-          'Базовый бонус',
-          'Базовый бонус атак (Хороший)',
-          'Базовый бонус атак (Средний)',
-          'Базовый бонус атак (Плохой)',
+      header: {
+        value: [
+          [
+            'Уровень класса',
+            'Базовый бонус',
+            'Базовый бонус',
+            'Базовый бонус атак (Хороший)',
+            'Базовый бонус атак (Средний)',
+            'Базовый бонус атак (Плохой)',
+          ],
         ],
-      ],
+      },
       body: [
         ['1', '+2', '+0', '+1', '+0', '+0'],
         ['2', '+3', '+0', '+2', '+1', '+1'],
@@ -288,16 +297,18 @@ export const TABLES: Array<tableType> = [
     KEY: 'table 3-2',
     NAME: 'Таблица 3-2: Опыт и преимущества зависящие от уровня',
     DATA: {
-      header: [
-        [
-          'Уровень персонажа',
-          'Оп (опыт)',
-          'Макс. кол-во рангов навыка класса',
-          'Макс. кол-во рангов навыков смежных классов',
-          'Отличит. черты',
-          'Повышение параметра',
+      header: {
+        value: [
+          [
+            'Уровень персонажа',
+            'Оп (опыт)',
+            'Макс. кол-во рангов навыка класса',
+            'Макс. кол-во рангов навыков смежных классов',
+            'Отличит. черты',
+            'Повышение параметра',
+          ],
         ],
-      ],
+      },
       body: [
         ['1', '0', '4', '2', '1-й', '-'],
         ['2', '1 000', '5', '2 1/2', '-', '-'],
@@ -325,7 +336,9 @@ export const TABLES: Array<tableType> = [
   {
     KEY: 'table 3-2.1',
     DATA: {
-      header: [['Тип КХП', 'Класс']],
+      header: {
+        value: [['Тип КХП', 'Класс']],
+      },
       body: [
         ['d4', 'Маг, Чародей'],
         ['d6', 'Бард, Вор'],

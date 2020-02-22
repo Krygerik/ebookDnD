@@ -8,9 +8,15 @@ export type navigationListPageType = {
   LINKS: Array<pageLinkType>,
   DESCRIPTION?: Array<string>,
 }
+// todo: nav page desc
+// type descriptionPageType = {
+//   isTable?: false,
+//   LABEL?: string,
+//   VALUE?: Array<string>,
+// }
 
 type paragraphType = {
-  isTable: false,
+  isTable?: false,
   LABEL?: string,
   image?: string,
   VALUE?: Array<string>,
@@ -27,20 +33,13 @@ export type tabType = {
   PARAGRAPHS: Array<paragraphType | tableType>,
 }
 
-type descriptionPageType = {
-  isTable?: false,
-  LABEL?: string,
-  VALUE?: Array<string>,
-}
-
 export type pageContentType = {
   TITLE: string,
   URL: string,
   isNavigationPage: false,
   parentUrl: string,
-  DESCRIPTION: Array<descriptionPageType | tableType>,
   image?: Array<string>,
-  TABS?: Array<tabType>,
+  TABS: Array<tabType>,
 }
 
 export type pageLinkType = {
