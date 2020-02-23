@@ -10,7 +10,7 @@ export const NavigationContent = (props: {
 }) => (
   <div className="navigationContent">
     {props.image && props.image.map((img, i) => <img src={img} key={i} />)}
-    {props.description && props.description.length && (
+    {props.description && (
       <div className={`description`}>
         {props.description.map((item, index) => (
           <p key={index}>{item}</p>
