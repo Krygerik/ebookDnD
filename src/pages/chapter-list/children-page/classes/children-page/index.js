@@ -1,0 +1,5 @@
+export { ADVANTAGES_PAGE } from './advantages'
+export { BARD_PAGE } from './bard'
+export { BONUSES_PAGE } from './bonuses'
+export { CLASSES_PAGE } from './classes-tab'
+export { DESCRIPTIONS_PAGE } from './descriptions'

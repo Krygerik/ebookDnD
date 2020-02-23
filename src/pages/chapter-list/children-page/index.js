@@ -1,0 +1,5 @@
+export { BASES_OF_CREATION } from './bases-of-creation'
+export { INTRODUCTION_PAGE } from './introduction'
+export { PARAMETERS_PAGE } from './parameters'
+export { RACE_LIST_PAGE } from './race'
+export { CLASSES_LIST_PAGE } from './classes'
