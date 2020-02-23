@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import { Header } from '../header'
 import { Content } from '../content'
 import { NavigationContent } from '../navigation-content'
@@ -13,7 +14,6 @@ type TPage = {
 
 export const Page = (props: TPage) => {
   const { content, tabKey } = props
-
   return (
     <div className="page">
       <Header title={content.TITLE} parentUrl={content.parentUrl} />
@@ -24,8 +24,10 @@ export const Page = (props: TPage) => {
             description={content.DESCRIPTION}
             image={content.image}
           />
-        ) : (
+        ) : tabKey ? (
           <Content content={content} tabKey={tabKey} />
+        ) : (
+          <Redirect to={content.URL + '/description'} />
         )}
       </div>
       <div className="footer"></div>

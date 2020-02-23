@@ -7,25 +7,28 @@ export const HALF_ORC_PAGE: pageContentType = {
   URL: '/race/half-orc',
   isNavigationPage: false,
   parentUrl: '/race',
-  DESCRIPTION: [
+  TABS: [
     {
-      VALUE: [
-        `В диких краях, варварские племена орков и людей проживает в 
-        крайне хрупком балансе, сражаясь, друг другом в войнах, и торгуя во 
-        времена перемирий. Полуорки, те, кто родился от человека и орка, но 
-        их не воспринимает ни та, ни другая культуры. Некоторые по разным причинам 
-        покидают свой дом, и направляются в цивилизованные земли, принося с собой из 
-        диких мест бесстрашие, храбрость, и боевой героизм.`,
+      NAME: 'Описание',
+      TAB_KEY: 'description',
+      PARAGRAPHS: [
+        {
+          VALUE: [
+            `В диких краях, варварские племена орков и людей проживает в 
+            крайне хрупком балансе, сражаясь, друг другом в войнах, и торгуя во 
+            времена перемирий. Полуорки, те, кто родился от человека и орка, но 
+            их не воспринимает ни та, ни другая культуры. Некоторые по разным причинам 
+            покидают свой дом, и направляются в цивилизованные земли, принося с собой из 
+            диких мест бесстрашие, храбрость, и боевой героизм.`,
+          ],
+        },
       ],
     },
-  ],
-  TABS: [
     {
       NAME: 'Индивидуальность',
       TAB_KEY: 'individuality',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Полуорки раздражительны и угрюмы. Они скорее будут действовать, 
             чем размышлять, и скорее сражаться, чем выяснять. Те, кто более везучи, 
@@ -44,8 +47,7 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'appearance',
       PARAGRAPHS: [
         {
-          isTable: false,
-          image: halfOrc,
+          image: [halfOrc],
           VALUE: [
             `Полуорки ростом 1,8–2,1 метр, весят они между 81 кг. и 112,5 кг. У 
             полуорков кожа серого оттенка, покатый лоб, выпяченная нижняя челюсть, торчащие 
@@ -69,7 +71,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'relations',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Из-за того что, орки кровные враги дварфов и эльфов, у полуорков жесткие 
             отношения с этими расами. По этой причине орки не в хороших отношениях с людьми, 
@@ -88,7 +89,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'ideolody',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `У полуорков прямая тенденция к хаосу, это от их родителей орков, но, от 
             родителей людей у них нет стремления ни к добру, ни к злу. Полуорки выросшие 
@@ -102,7 +102,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'land-of-halforc',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Полуорки не имеют собственных земель. Наиболее часто они живут среди орков.
             Среди других рас, люди, наиболее чаще принимают полуорков, поэтому они практически 
@@ -116,7 +115,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'religion',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Как и орки, полуорки поклоняются Груумшу, главному богу орков, и архиврагу 
             Кореллону Ларесиану (богу эльфов). Так как Груумш злой бог, варвары и воины 
@@ -134,7 +132,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'languages',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Орки, не имеющие своего собственного алфавита, используют шрифт Дварфов
             лишь в редких случаях чтобы написать что-то на Орочьем. Очень часто письменность
@@ -148,7 +145,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'names',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Обычно полуорк выбирает имя для того, что бы произвести какое то впечатление
             на кого-то. Если он проживает среди людей, он выбирает человеческое имя. Если он
@@ -159,12 +155,10 @@ export const HALF_ORC_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Имена мужчин',
           VALUE: [`Денч, Фенг, Гелл, Хенк, Холг, Имш, Кес, Ронт, Шамп, Фокк`],
         },
         {
-          isTable: false,
           LABEL: 'Имена женщин',
           VALUE: [
             `Багги, Эмен, Энгонг, Мйев, Ниега, Овак, Овнка, Шауса, Вола и Волен`,
@@ -177,7 +171,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'adventurers',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Полуорки проживающие среди людей, неизменно востребованы как неистовые
             воины, из-за своей высокой силы. Очень часто гонимые из благородного общества,
@@ -192,7 +185,6 @@ export const HALF_ORC_PAGE: pageContentType = {
       TAB_KEY: 'racial-characteris',
       PARAGRAPHS: [
         {
-          isTable: false,
           LABEL: '+2 Сила, –2 Интеллект, –2 Обаяние',
           VALUE: [
             `Полуорки сильны, но их
@@ -200,7 +192,6 @@ export const HALF_ORC_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Среднего размера',
           VALUE: [
             `Как существа среднего роста, полуорки не
@@ -208,11 +199,9 @@ export const HALF_ORC_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Базовая скорость полуорка 9 метров',
         },
         {
-          isTable: false,
           LABEL: 'Темновидение',
           VALUE: [
             `Полуорки (и орки) могут видеть в темноте до 18 метров. Они видят все черно-белым, но как обычным
@@ -221,7 +210,6 @@ export const HALF_ORC_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Кровь орков',
           VALUE: [
             `При каких-то особых условиях и эффектах касающейся расы орк, полуорк принимается как орк.`,
@@ -235,7 +223,6 @@ export const HALF_ORC_PAGE: pageContentType = {
         },
 
         {
-          isTable: false,
           LABEL: `Автоматические Языки: Общий и Орков. Бонусные языки:
           Драконов, Гигантов, Гноллов, Гоблинов, Абисса.`,
           VALUE: [
@@ -244,7 +231,6 @@ export const HALF_ORC_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: `Желаемый класс: Варвар`,
           VALUE: [
             `Мультиклассовый персонаж орк,

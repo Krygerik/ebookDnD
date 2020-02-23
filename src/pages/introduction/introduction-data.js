@@ -6,34 +6,37 @@ export const INTRODUCTION_PAGE: pageContentType = {
   URL: '/introduction',
   isNavigationPage: false,
   parentUrl: '/',
-  DESCRIPTION: [
+  TABS: [
     {
-      VALUE: [
-        `Это Ролевая Игра ПОДЗЕМЕЛЬЯ И ДРАКОНЫ, игра, определяющая
-        жанр, и игра, у которой опыт ведения фэнтэзийных игровых
-        миров более 30 лет`,
-        `D&D игра вашего воображения, в которой вы принимаете
-        участие в роли героя, созданного вами персонажа, в
-        головокружительных приключениях, выполняете опасные
-        задания. Ваш персонаж может быть сильным воином или
-        хитрым вором, набожным жрецом или могущественным
-        магом. С несколькими верными товарищами на своей стороне,
-        в поисках сокровищ вы исследуете руины, наполненные
-        чудовищами подземелья. Игра предлагает бесконечные
-        возможности и неограниченный выбор, гораздо более
-        широкий, чем может предложить самая сложная и искушенная
-        в выборе компьютерная игра, потому как вы можете делать
-        все, что создает ваше воображение.`,
+      NAME: 'Описание',
+      TAB_KEY: 'description',
+      PARAGRAPHS: [
+        {
+          VALUE: [
+            `Это Ролевая Игра ПОДЗЕМЕЛЬЯ И ДРАКОНЫ, игра, определяющая
+            жанр, и игра, у которой опыт ведения фэнтэзийных игровых
+            миров более 30 лет`,
+            `D&D игра вашего воображения, в которой вы принимаете
+            участие в роли героя, созданного вами персонажа, в
+            головокружительных приключениях, выполняете опасные
+            задания. Ваш персонаж может быть сильным воином или
+            хитрым вором, набожным жрецом или могущественным
+            магом. С несколькими верными товарищами на своей стороне,
+            в поисках сокровищ вы исследуете руины, наполненные
+            чудовищами подземелья. Игра предлагает бесконечные
+            возможности и неограниченный выбор, гораздо более
+            широкий, чем может предложить самая сложная и искушенная
+            в выборе компьютерная игра, потому как вы можете делать
+            все, что создает ваше воображение.`,
+          ],
+        },
       ],
     },
-  ],
-  TABS: [
     {
       NAME: 'Игра D&D',
       TAB_KEY: 'game-dnd',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Игра D&D фантазийное воплощение вашего воображения.
                 Она - частично действие, частично повествование истории,
@@ -72,7 +75,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'three-dimensions',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Игра ПОДЗЕМЕЛЬЯ&ДРАКОНЫ – игра воображения, но это и также
                 игра тактики и стратегии. Фигурки и поле боя наиболее лучше
@@ -93,7 +95,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'characters',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `В тех приключениях, где вы играете, ваш персонаж является
                 звездой, как и герои книг или фильмов. Будучи игроком,
@@ -114,7 +115,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'why-updates',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Впервые новая игра ДРАКОНЫ&ПОДЗЕМЕЛЬЯ стартовала
                 в 2000 году. За три прошедших года, система d20
@@ -161,7 +161,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'adventures',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Ваш персонаж является авантюристом, героем, отправившимся
                 на эпические задания в поиске удачи и славы. К вашим
@@ -203,7 +202,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'game-process',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `ПОДЗЕМЕЛЬЯ&ДРАКОНЫ использует базовую механику, которая
                 охватывает все действия в игре. Это основное правило
@@ -211,7 +209,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Механика ядра',
           VALUE: [
             `Когда вы пытаетесь провести
@@ -235,7 +232,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'rules',
       PARAGRAPHS: [
         {
-          isTable: false,
           LABEL: 'Важно',
           VALUE: [
             `Чтобы играть в эту игру вам не нужно запоминать всю
@@ -260,11 +256,9 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'need-to-play',
       PARAGRAPHS: [
         {
-          isTable: false,
           LABEL: 'Чтобы играть в D&D вашей группе понадобятся',
         },
         {
-          isTable: false,
           LABEL: '1',
           VALUE: [
             `Руководство Игрока, Руководство Мастера
@@ -274,7 +268,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '2',
           VALUE: [
             `Копия карточки игрока, которая расположена в конце
@@ -282,7 +275,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '3',
           VALUE: [
             `Поле боя. Содержится в Руководстве Мастера
@@ -290,7 +282,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '4',
           VALUE: [
             `Фигурки, чтобы отображать каждого персонажа и
@@ -298,7 +289,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '5',
           VALUE: [
             `Комплект кубиков для каждого игрока. В комплект
@@ -309,7 +299,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '6',
           VALUE: [
             `Карандаши, черновая бумага, листы в клетку, чтобы вести
@@ -319,12 +308,10 @@ export const INTRODUCTION_PAGE: pageContentType = {
       ],
     },
     {
-      isTable: false,
       NAME: 'Кубик',
       TAB_KEY: 'cube',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Правила сокращений для записи бросков кубиков,
                 например «3d4+3», означает, что нужно бросить 3
@@ -337,7 +324,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '1d8',
           VALUE: [
             `Один восьмигранный кубик (выбрасывается число
@@ -345,7 +331,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '1d8+2',
           VALUE: [
             `Один восьмигранник плюс 2 (3-10). Это
@@ -354,7 +339,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: '2d4+2',
           VALUE: [
             `Два четырёхгранника плюс 2 (4-10). Это количество
@@ -363,7 +347,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'd%',
           VALUE: [
             `Ещё называемый «процентник». Бросая два
@@ -378,7 +361,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Важно',
           VALUE: [
             `Не каждое действие требует броска кубика.
@@ -400,7 +382,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'what-can-do',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Персонаж может попытаться выполнить все то, что пришло в
                 его воображение, естественно если оно вписывается в рамки
@@ -414,7 +395,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Проверки Навыков',
           VALUE: [
             `Чтобы выполнить проверку навыка, бросьте d20 и добавьте
@@ -431,7 +411,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Проверки Параметров',
           VALUE: [
             `Проверки параметров выполнятся если у персонажа
@@ -446,7 +425,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Броски Атаки',
           VALUE: [
             `Для атаки оппонента проведите бросок d20, и добавьте
@@ -475,7 +453,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'battle-round',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Сражение разыгрывается по раундам. Каждый раунд в
                 игровом мире представляет 6 секунд, вне зависимости от
@@ -499,7 +476,6 @@ export const INTRODUCTION_PAGE: pageContentType = {
       TAB_KEY: 'player-role',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Как игрок, вы используете эту книгу для создания и управления
                 своего персонажа. Ваш персонаж является авантюристом,

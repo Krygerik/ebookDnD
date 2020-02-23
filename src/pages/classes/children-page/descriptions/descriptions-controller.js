@@ -12,6 +12,5 @@ const DescriptionsContainer = (props: { match: { params: Object } }) => {
 
 export const DescriptionsWithTabRouter = withTabRouter(
   DescriptionsContainer,
-  DESCRIPTIONS_PAGE.URL,
-  false
+  DESCRIPTIONS_PAGE.URL
 )

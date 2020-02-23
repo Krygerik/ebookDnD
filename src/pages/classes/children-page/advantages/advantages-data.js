@@ -10,7 +10,7 @@ export const ADVANTAGES_PAGE: pageContentType = {
   TABS: [
     {
       NAME: 'Описание',
-      TAB_KEY: 'desciption',
+      TAB_KEY: 'description',
       PARAGRAPHS: [
         {
           VALUE: [

@@ -8,13 +8,13 @@ export const CHOSE_RACE_PAGE: pageContentType = {
   URL: '/race/chose-race',
   isNavigationPage: false,
   parentUrl: '/race',
-  image: [race_mans, race_womans],
   TABS: [
     {
       NAME: 'Описание',
-      TAB_KEY: 'desc',
+      TAB_KEY: 'description',
       PARAGRAPHS: [
         {
+          image: [race_mans, race_womans],
           VALUE: [
             `После того как вы набросали свои показатели параметров, прежде чем записать их в карточку игрока, выберите
           вашу расу. В это же время вы выбираете его или её класс,

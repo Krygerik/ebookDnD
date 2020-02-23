@@ -14,6 +14,5 @@ const AdvantagesContainer = (props: {
 
 export const AdvantagesWithTabRouter = withTabRouter(
   AdvantagesContainer,
-  ADVANTAGES_PAGE.URL,
-  false
+  ADVANTAGES_PAGE.URL
 )

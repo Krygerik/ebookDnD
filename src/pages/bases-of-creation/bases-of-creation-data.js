@@ -6,23 +6,26 @@ export const BASES_OF_CREATION: pageContentType = {
   URL: '/bases-of-creation-char',
   parentUrl: '/',
   isNavigationPage: false,
-  DESCRIPTION: [
+  TABS: [
     {
-      VALUE: [
-        `Просмотрите с 1 по 5 Главы, а затем следуя этим шагам создайте
-            персонажа 1-го уровня. Из материала вам понадобятся: копия
-            карточки игрока, карандаш, несколько листов бумаги для
-            различных записей, и четыре шестигранных кубика`,
+      NAME: 'Описание',
+      TAB_KEY: 'description',
+      PARAGRAPHS: [
+        {
+          VALUE: [
+            `Просмотрите с 1 по 5 Главы, а затем следуя этим шагам создайте
+                персонажа 1-го уровня. Из материала вам понадобятся: копия
+                карточки игрока, карандаш, несколько листов бумаги для
+                различных записей, и четыре шестигранных кубика`,
+          ],
+        },
       ],
     },
-  ],
-  TABS: [
     {
       NAME: 'Посоветуйтесь с вашим мастером подземелий',
       TAB_KEY: 'consult',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `У вашего МП могут свои домашние правила. Вам также
                 нужно будет поинтересоваться какие персонажи (их классы,
@@ -37,7 +40,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'sketch',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Набросайте каждый из параметров. Для этого, бросьте
                 четыре шестигранника, игнорируя самый нижний показатель,
@@ -54,7 +56,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'chose-class-and-race',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Выберите одновременно расу и класс для вашего персонажа,
                 так как некоторые расы более удобны для некоторых классов.
@@ -73,7 +74,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'distribute',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Теперь зная расу и класс вашего персонажа, соответственно
                 показателей ваших шести способностей, которые вы кидали в
@@ -101,7 +101,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'starter-pack',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `В конце каждого класса в 3 Главе, вам будет предложен
             как минимум один стартовый пакет. Просмотрите его. Он
@@ -120,7 +119,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'record-traits',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Раса и класс вашего персонажа, дают вам определенный ряд
             плюсов и минусов. Большинство признаков автоматические,
@@ -137,7 +135,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'chose-skills',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `В зависимости от класса вашего персонажа и его модификатора
             Интеллекта, вы получите определенное количество очков
@@ -168,7 +165,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'chose-char',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `У каждого 1 уровневого персонажа есть одна черта. Смотрите
             Таблица 5-1: Отличительные Черты (стр 9_), со списком всех
@@ -183,7 +179,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'intro-the-description',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Просмотрите Главу 6: Описание. Это поможет вам лучше
             детализировать вашего персонажа. Вы можете определится с
@@ -197,7 +192,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'chose-equip',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Если вы не используете снаряжение приведенное
             в стартовом пакете для каждого класса, вы можете
@@ -213,14 +207,12 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'record-battle-params',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Определите эти данные, и запишите их на своей карточке
             игрока`,
           ],
         },
         {
-          isTable: false,
           LABEL: 'Хит-Поинты',
           VALUE: [
             `Ваши хит-поинты (хп), определяют
@@ -233,7 +225,6 @@ export const BASES_OF_CREATION: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Класс Доспеха',
           VALUE: [
             `Ваш Класс Доспеха (КД) указывает на то,
@@ -244,7 +235,6 @@ export const BASES_OF_CREATION: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Инициатива',
           VALUE: [
             `Модификатор инициативы вашего
@@ -254,7 +244,6 @@ export const BASES_OF_CREATION: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Бонус Атаки',
           VALUE: [
             `Ваш класс определяет базовый бонус
@@ -265,7 +254,6 @@ export const BASES_OF_CREATION: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Спас-броски',
           VALUE: [
             `Ваш класс определяет базовый бонус
@@ -282,7 +270,6 @@ export const BASES_OF_CREATION: pageContentType = {
       TAB_KEY: 'another-details',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Теперь придумайте или выберите из предложенного списка
               имя персонажа, определите его пол, мировоззрение, возраст,

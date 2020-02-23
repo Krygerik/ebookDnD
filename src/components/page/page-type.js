@@ -18,7 +18,7 @@ export type navigationListPageType = {
 type paragraphType = {
   isTable?: false,
   LABEL?: string,
-  image?: string,
+  image?: Array<string>,
   VALUE?: Array<string>,
 }
 
@@ -38,7 +38,6 @@ export type pageContentType = {
   URL: string,
   isNavigationPage: false,
   parentUrl: string,
-  image?: Array<string>,
   TABS: Array<tabType>,
 }
 

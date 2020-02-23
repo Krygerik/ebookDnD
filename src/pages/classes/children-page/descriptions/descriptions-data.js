@@ -10,7 +10,7 @@ export const DESCRIPTIONS_PAGE: pageContentType = {
   TABS: [
     {
       NAME: 'Описание',
-      TAB_KEY: 'desc',
+      TAB_KEY: 'description',
       PARAGRAPHS: [
         {
           VALUE: [

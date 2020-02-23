@@ -27,7 +27,10 @@ export const TabInfo = (props: TTabInfo) => {
                 {paraghrap.LABEL && (
                   <div className="paragraph__label">{paraghrap.LABEL}</div>
                 )}
-                {paraghrap.image && <img src={paraghrap.image} />}
+                {paraghrap.image &&
+                  paraghrap.image.map((image, index) => (
+                    <img src={image} key={index} />
+                  ))}
                 {paraghrap.VALUE &&
                   paraghrap.VALUE.map((value, i) => (
                     <p key={i} className="paragraph__value">

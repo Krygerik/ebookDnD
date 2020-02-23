@@ -12,6 +12,5 @@ const BonusesContainer = (props: { match: { params: Object } }) => {
 
 export const BonusesWithTabRouter = withTabRouter(
   BonusesContainer,
-  BONUSES_PAGE.URL,
-  false
+  BONUSES_PAGE.URL
 )

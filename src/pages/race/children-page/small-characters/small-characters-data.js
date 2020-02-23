@@ -9,7 +9,7 @@ export const SMALL_CHARACTERS_PAGE: pageContentType = {
   TABS: [
     {
       NAME: 'Описание',
-      TAB_KEY: 'desc',
+      TAB_KEY: 'description',
       PARAGRAPHS: [
         {
           VALUE: [

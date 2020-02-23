@@ -12,6 +12,5 @@ const ChoseRaceContainer = (props: { match: { params: Object } }) => {
 
 export const ChoseRaceWithTabRouter = withTabRouter(
   ChoseRaceContainer,
-  CHOSE_RACE_PAGE.URL,
-  false
+  CHOSE_RACE_PAGE.URL
 )

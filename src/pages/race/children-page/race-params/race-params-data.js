@@ -7,20 +7,23 @@ export const RACE_PARAMS_PAGE: pageContentType = {
   URL: '/race/race-params',
   isNavigationPage: false,
   parentUrl: '/race',
-  DESCRIPTION: [
+  TABS: [
     {
-      VALUE: [
-        `Раса вашего персонажа определяется некоторыми его или её особенностями`,
+      NAME: 'Описание',
+      TAB_KEY: 'description',
+      PARAGRAPHS: [
+        {
+          VALUE: [
+            `Раса вашего персонажа определяется некоторыми его или её особенностями`,
+          ],
+        },
       ],
     },
-  ],
-  TABS: [
     {
       NAME: 'Модификаторы параметров',
       TAB_KEY: 'params-modifiers',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Найдите расу вашего персонажа в "Таблице 2-1: Расовые Модификаторы Параметров" (смотрите на следующей
                 странице) и примените их к тем показателям, что вы выкинули на кубиках. Если эти изменения подняли выше 18
@@ -42,7 +45,6 @@ export const RACE_PARAMS_PAGE: pageContentType = {
       TAB_KEY: 'desired-class',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `У каждой расы есть желаемый класс, указанный
             в "Таблице 2-1: Расовые Модификаторы Параметров".
@@ -65,7 +67,6 @@ export const RACE_PARAMS_PAGE: pageContentType = {
       TAB_KEY: 'races-and-languages',
       PARAGRAPHS: [
         {
-          isTable: false,
           VALUE: [
             `Побывав в большом городе, вы можете услышать самые
             разнообразные языки, на которых общаются окружающие.
@@ -80,7 +81,6 @@ export const RACE_PARAMS_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Способность чтения и письма',
           VALUE: [
             `Если ваш персонаж не
@@ -90,7 +90,6 @@ export const RACE_PARAMS_PAGE: pageContentType = {
           ],
         },
         {
-          isTable: false,
           LABEL: 'Языки относящиеся к классам',
           VALUE: [
             `Жрецы, друиды, и маги могут выбрать следующие языки,

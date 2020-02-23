@@ -10,8 +10,4 @@ const BardContainer = (props: { match: { params: Object } }) => {
   return <Page content={BARD_PAGE} tabKey={match.params.tabKey} />
 }
 
-export const BardWithTabRouter = withTabRouter(
-  BardContainer,
-  BARD_PAGE.URL,
-  false
-)
+export const BardWithTabRouter = withTabRouter(BardContainer, BARD_PAGE.URL)
