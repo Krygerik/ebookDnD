@@ -14,20 +14,10 @@ export const CHAPTER_LIST_PAGE: navigationListPageType = {
   parentUrl: '',
   isNavigationPage: true,
   LINKS: [
-    {
-      DATA: INTRODUCTION_PAGE,
-    },
-    {
-      DATA: BASES_OF_CREATION,
-    },
-    {
-      DATA: PARAMETERS_PAGE,
-    },
-    {
-      DATA: RACE_LIST_PAGE,
-    },
-    {
-      DATA: CLASSES_LIST_PAGE,
-    },
+    INTRODUCTION_PAGE,
+    BASES_OF_CREATION,
+    PARAMETERS_PAGE,
+    RACE_LIST_PAGE,
+    CLASSES_LIST_PAGE,
   ],
 }

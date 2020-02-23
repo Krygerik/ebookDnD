@@ -5,15 +5,9 @@ export type navigationListPageType = {
   isNavigationPage: true,
   parentUrl: string,
   image?: Array<string>,
-  LINKS: Array<pageLinkType>,
+  LINKS: Array<navigationListPageType | pageContentType>,
   DESCRIPTION?: Array<string>,
 }
-// todo: nav page desc
-// type descriptionPageType = {
-//   isTable?: false,
-//   LABEL?: string,
-//   VALUE?: Array<string>,
-// }
 
 type paragraphType = {
   isTable?: false,
@@ -39,9 +33,4 @@ export type pageContentType = {
   isNavigationPage: false,
   parentUrl: string,
   TABS: Array<tabType>,
-}
-
-export type pageLinkType = {
-  DATA: navigationListPageType | pageContentType,
-  COMPONENT?: any,
 }

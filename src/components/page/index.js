@@ -1,6 +1,5 @@
 // @flow
 export type {
-  pageLinkType,
   pageContentType,
   navigationListPageType,
   tabType,

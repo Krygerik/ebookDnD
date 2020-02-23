@@ -33,20 +33,10 @@ export const CLASSES_LIST_PAGE: navigationListPageType = {
         этого класса.`,
   ],
   LINKS: [
-    {
-      DATA: CLASSES_PAGE,
-    },
-    {
-      DATA: BONUSES_PAGE,
-    },
-    {
-      DATA: ADVANTAGES_PAGE,
-    },
-    {
-      DATA: DESCRIPTIONS_PAGE,
-    },
-    {
-      DATA: BARD_PAGE,
-    },
+    CLASSES_PAGE,
+    BONUSES_PAGE,
+    ADVANTAGES_PAGE,
+    DESCRIPTIONS_PAGE,
+    BARD_PAGE,
   ],
 }

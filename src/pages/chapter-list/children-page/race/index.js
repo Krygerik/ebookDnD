@@ -32,35 +32,15 @@ export const RACE_LIST_PAGE: navigationListPageType = {
         силы, могущества, прибыли соединяет их в одном месте.`,
   ],
   LINKS: [
-    {
-      DATA: CHOSE_RACE_PAGE,
-    },
-    {
-      DATA: RACE_PARAMS_PAGE,
-    },
-    {
-      DATA: HUMAN_PAGE,
-    },
-    {
-      DATA: GNOME_PAGE,
-    },
-    {
-      DATA: DWARF_PAGE,
-    },
-    {
-      DATA: HALF_ORC_PAGE,
-    },
-    {
-      DATA: HALF_ELF_PAGE,
-    },
-    {
-      DATA: HALFLING_PAGE,
-    },
-    {
-      DATA: ELF_PAGE,
-    },
-    {
-      DATA: SMALL_CHARACTERS_PAGE,
-    },
+    CHOSE_RACE_PAGE,
+    RACE_PARAMS_PAGE,
+    HUMAN_PAGE,
+    GNOME_PAGE,
+    DWARF_PAGE,
+    HALF_ORC_PAGE,
+    HALF_ELF_PAGE,
+    HALFLING_PAGE,
+    ELF_PAGE,
+    SMALL_CHARACTERS_PAGE,
   ],
 }

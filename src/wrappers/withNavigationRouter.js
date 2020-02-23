@@ -6,19 +6,19 @@ import type { navigationListPageType } from '@/components/page'
 import { withTabRouter } from '@/wrappers/withTabRouter'
 
 export const withNavigationRouter = (
-  navigationPage: navigationListPageType
+  contentPage: navigationListPageType
 ) => () => (
   <Switch>
     <Route
       exact
-      path={navigationPage.URL}
-      component={ChildContentWrapper(navigationPage)}
+      path={contentPage.URL}
+      component={ChildContentWrapper(contentPage)}
     />
-    {navigationPage.LINKS.map(child => (
+    {contentPage.LINKS.map(child => (
       <Route
-        key={child.DATA.URL}
-        path={child.DATA.URL}
-        component={ChildController(child.DATA)}
+        key={child.URL}
+        path={child.URL}
+        component={ChildController(child)}
       />
     ))}
   </Switch>

@@ -1,10 +1,9 @@
 // @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import type { pageLinkType } from '../page'
 
 export const NavigationContent = (props: {
-  links: Array<pageLinkType>,
+  links: Array<any>,
   description?: Array<string>,
   image?: Array<string>,
 }) => (
@@ -18,7 +17,7 @@ export const NavigationContent = (props: {
       </div>
     )}
     {props.links.map((link, index) => {
-      const { URL, TITLE } = link.DATA
+      const { URL, TITLE } = link
 
       return URL ? (
         <Link className="link" key={index} to={URL}>
