@@ -13,7 +13,7 @@ export const TabInfo = (props: TTabInfo) => {
   const { tabs, tabKey } = props
 
   return (
-    <div className="tab-info">
+    <div className={`tab-info ${tabs.length < 2 ? 'without-navbar' : ''}`}>
       {tabs
         .filter(tab => tab.TAB_KEY === tabKey)
         .map(tab =>

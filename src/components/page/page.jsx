@@ -14,6 +14,7 @@ type TPage = {
 
 export const Page = (props: TPage) => {
   const { content, tabKey } = props
+
   return (
     <div className="page">
       <Header title={content.TITLE} parentUrl={content.parentUrl} />
