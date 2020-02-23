@@ -1,17 +1,6 @@
 // @flow
 import type { navigationListPageType } from '@/components/page'
-import {
-  CHOSE_RACE_PAGE,
-  DWARF_PAGE,
-  RACE_PARAMS_PAGE,
-  HUMAN_PAGE,
-  GNOME_PAGE,
-  HALF_ORC_PAGE,
-  HALF_ELF_PAGE,
-  HALFLING_PAGE,
-  ELF_PAGE,
-  SMALL_CHARACTERS_PAGE,
-} from './children-page'
+import { childrenDataList } from './children-page'
 
 export const RACE_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 2. Расы',
@@ -31,16 +20,5 @@ export const RACE_LIST_PAGE: navigationListPageType = {
         полуэльфы, полуорки, халфлинги, надежда на достижение
         силы, могущества, прибыли соединяет их в одном месте.`,
   ],
-  LINKS: [
-    CHOSE_RACE_PAGE,
-    RACE_PARAMS_PAGE,
-    HUMAN_PAGE,
-    GNOME_PAGE,
-    DWARF_PAGE,
-    HALF_ORC_PAGE,
-    HALF_ELF_PAGE,
-    HALFLING_PAGE,
-    ELF_PAGE,
-    SMALL_CHARACTERS_PAGE,
-  ],
+  LINKS: childrenDataList,
 }

@@ -1,12 +1,6 @@
 // @flow
 import type { navigationListPageType } from '@/components/page'
-import {
-  CLASSES_PAGE,
-  BONUSES_PAGE,
-  ADVANTAGES_PAGE,
-  DESCRIPTIONS_PAGE,
-  BARD_PAGE,
-} from './children-page'
+import { childrenDataList } from './children-page'
 
 export const CLASSES_LIST_PAGE: navigationListPageType = {
   TITLE: 'Глава 3. Классы',
@@ -32,11 +26,5 @@ export const CLASSES_LIST_PAGE: navigationListPageType = {
         вам расположить параметры вашего персонажа, и предположить какая раса будет лучшей, или наиболее удобной для
         этого класса.`,
   ],
-  LINKS: [
-    CLASSES_PAGE,
-    BONUSES_PAGE,
-    ADVANTAGES_PAGE,
-    DESCRIPTIONS_PAGE,
-    BARD_PAGE,
-  ],
+  LINKS: childrenDataList,
 }
