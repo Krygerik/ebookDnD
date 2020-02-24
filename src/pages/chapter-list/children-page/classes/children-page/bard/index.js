@@ -1,5 +1,7 @@
 // @flow
 import type { pageContentType } from '@/components/page'
+import { BARD_TABLE } from '@/tables'
+import bardImage from '@/assets/bard.png'
 
 export const BARD_PAGE: pageContentType = {
   TITLE: 'Бард',
@@ -12,6 +14,7 @@ export const BARD_PAGE: pageContentType = {
       TAB_KEY: 'description',
       PARAGRAPHS: [
         {
+          image: [bardImage],
           VALUE: [
             `Поговаривают, что музыка это своеобразный вид магии, и
             барды это доказывают. Жизнь барда это: путешествия по
@@ -152,6 +155,16 @@ export const BARD_PAGE: pageContentType = {
             из четырех персонажей, возможно бард станет самым ценным дополнением в виде пятого персонажа поддержки, а
             также он может стать великолепным лидером команды`,
           ],
+        },
+      ],
+    },
+    {
+      NAME: 'Таблица уровней',
+      TAB_KEY: 'lvl-table',
+      PARAGRAPHS: [
+        {
+          isTable: true,
+          KEY: BARD_TABLE,
         },
       ],
     },

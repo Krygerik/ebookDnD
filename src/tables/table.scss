@@ -3,6 +3,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  overflow-x: auto;
 
   .tab__table-label {
     font-size: 22px;
