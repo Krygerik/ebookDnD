@@ -1,6 +1,10 @@
 // @flow
 import type { pageContentType } from '@/components/page'
-import { BARD_TABLE, BARD_COUNT_SPELLS_TABLE } from '@/tables'
+import {
+  BARD_TABLE,
+  BARD_COUNT_SPELLS_TABLE,
+  BARD_KNOWLENGE_TABLE,
+} from '@/tables'
 import bardImage from '@/assets/bard.png'
 
 export const BARD_PAGE: pageContentType = {
@@ -326,6 +330,10 @@ export const BARD_PAGE: pageContentType = {
             различен: и 10, и 20 и выше; этот тип знаний очень разнообразен. МП должен обращаться к таблице, идущей ниже, чтобы
             определять Класс Сложности`,
           ],
+        },
+        {
+          isTable: true,
+          KEY: BARD_KNOWLENGE_TABLE,
         },
         {
           LABEL: 'Музыка Барда',
