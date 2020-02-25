@@ -4,6 +4,7 @@ import {
   BARD_TABLE,
   BARD_COUNT_SPELLS_TABLE,
   BARD_KNOWLENGE_TABLE,
+  BARD_STARTER_PACK_SKILLS_TABLE,
 } from '@/tables'
 import bardImage from '@/assets/bard.png'
 
@@ -255,9 +256,6 @@ export const BARD_PAGE: pageContentType = {
       TAB_KEY: 'features',
       PARAGRAPHS: [
         {
-          VALUE: [`У бардов следующие классовые особенности`],
-        },
-        {
           LABEL: 'Квалификация в оружии и доспехах',
           VALUE: [
             `Бард умело обращается со всеми видами простого оружия. В дополнение,
@@ -497,9 +495,14 @@ export const BARD_PAGE: pageContentType = {
           ],
         },
         {
+          isTable: true,
+          KEY: BARD_STARTER_PACK_SKILLS_TABLE,
+        },
+        {
           LABEL: 'Отличительная черта',
           VALUE: [
-            `Если Ловкость 13 или выше, Уворачивание; если ловкость 12 или ниже Улучшенная Инициатива`,
+            `Если Ловкость 13 или выше - Уворачивание`,
+            `Если Ловкость 12 или ниже - Улучшенная Инициатива`,
           ],
         },
         {
