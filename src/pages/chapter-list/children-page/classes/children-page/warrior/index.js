@@ -1,7 +1,11 @@
 // @flow
 import type { pageContentType } from '@/components/page'
-// import { BARD_TABLE } from '@/tables'
-// import bardImage from '@/assets/bard.png'
+import {
+  WARRIROR_TABLE,
+  WARRIROR_DWARF_STARTER_PACK_TABLE,
+  WARRIROR_HUMAN_STARTER_PACK_TABLE,
+} from '@/tables'
+import warriorImage from '@/assets/warrior.png'
 
 export const WARRIOR_PAGE: pageContentType = {
   TITLE: 'Воин',
@@ -14,6 +18,7 @@ export const WARRIOR_PAGE: pageContentType = {
       TAB_KEY: 'description',
       PARAGRAPHS: [
         {
+          image: [warriorImage],
           VALUE: [
             `Путешествующий рыцарь, воинствующий лорд захватчик,
             королевский чемпион, элитный солдат, опытный наемник
@@ -153,7 +158,12 @@ export const WARRIOR_PAGE: pageContentType = {
     {
       NAME: 'Таблица уровней',
       TAB_KEY: 'lvl-table',
-      PARAGRAPHS: [],
+      PARAGRAPHS: [
+        {
+          isTable: true,
+          KEY: WARRIROR_TABLE,
+        },
+      ],
     },
     {
       NAME: 'Игровая информация',
@@ -270,6 +280,10 @@ export const WARRIOR_PAGE: pageContentType = {
           ],
         },
         {
+          isTable: true,
+          KEY: WARRIROR_DWARF_STARTER_PACK_TABLE,
+        },
+        {
           LABEL: 'Отличительная черта',
           VALUE: [`Улучшенное Обращение с Оружием (Боевой топор карликов)`],
         },
@@ -312,6 +326,10 @@ export const WARRIOR_PAGE: pageContentType = {
           VALUE: [
             `Выберите количество навыков равное 3 + модификатор Интеллекта`,
           ],
+        },
+        {
+          isTable: true,
+          KEY: WARRIROR_HUMAN_STARTER_PACK_TABLE,
         },
         {
           LABEL: 'Отличительная черта',
