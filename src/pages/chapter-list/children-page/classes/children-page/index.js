@@ -5,6 +5,7 @@ import { CLASSES_PAGE } from './classes-tab'
 import { DESCRIPTIONS_PAGE } from './descriptions'
 import { BARBARIAN_PAGE } from './barbarian'
 import { WARRIOR_PAGE } from './warrior'
+import { THIEF_PAGE } from './thief'
 
 export const childrenDataList = [
   CLASSES_PAGE,
@@ -14,4 +15,5 @@ export const childrenDataList = [
   BARD_PAGE,
   BARBARIAN_PAGE,
   WARRIOR_PAGE,
+  THIEF_PAGE,
 ]
