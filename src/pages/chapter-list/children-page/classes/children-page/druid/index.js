@@ -1,7 +1,16 @@
 // @flow
 import type { pageContentType } from '@/components/page'
-// import { THIEF_TABLE, THIEF_STARTER_PACK_TABLE } from '@/tables'
-// import thiefImage from '@/assets/thief.png'
+import {
+  DRUID_LVL_TABLE,
+  DRUID_ANIMAL_COMPANION_LVL_TABLE,
+  DRUID_4_LVL_ANIMAL_COMPANION_TABLE,
+  DRUID_7_LVL_ANIMAL_COMPANION_TABLE,
+  DRUID_10_LVL_ANIMAL_COMPANION_TABLE,
+  DRUID_13_LVL_ANIMAL_COMPANION_TABLE,
+  DRUID_16_LVL_ANIMAL_COMPANION_TABLE,
+  DRUID_STARTER_PACK_TABLE,
+} from '@/tables'
+import druidImage from '@/assets/druid.png'
 
 export const DRUID_PAGE: pageContentType = {
   TITLE: 'Друид',
@@ -14,7 +23,7 @@ export const DRUID_PAGE: pageContentType = {
       TAB_KEY: 'description',
       PARAGRAPHS: [
         {
-          // image: [thiefImage],
+          image: [druidImage],
           VALUE: [
             `Гнев бури, спокойствие восходящего солнца, хитрость лисы,
             сила медведя – всем этим, и ещё многим другим обладает друид.
@@ -161,7 +170,7 @@ export const DRUID_PAGE: pageContentType = {
       PARAGRAPHS: [
         {
           isTable: true,
-          KEY: '',
+          KEY: DRUID_LVL_TABLE,
         },
       ],
     },
@@ -245,6 +254,10 @@ export const DRUID_PAGE: pageContentType = {
           ],
         },
         {
+          isTable: true,
+          KEY: DRUID_ANIMAL_COMPANION_LVL_TABLE,
+        },
+        {
           LABEL: 'Основы Животного-Спутника',
           VALUE: [
             `Используйте базовые параметры для существа-спутника из Справочника Монстров,
@@ -311,6 +324,40 @@ export const DRUID_PAGE: pageContentType = {
             Рефлекса для половины поврежедний, оно вовсе не переносит повреждений при
             успешном спасброске, и только половину повреждений при неудачном спасброске`,
           ],
+        },
+      ],
+    },
+    {
+      NAME: 'Альтернативные животные-спутники',
+      TAB_KEY: 'alt-companion',
+      PARAGRAPHS: [
+        {
+          VALUE: [
+            `Как было указано в тексте на стр. 36, друид достаточно высокого уровня способен
+            выбирать себе животного компаньона из добавочных списков, принимая указанную в
+            скобках корректировку уровня, при определении характеристик и специальных
+            способностей спутника`,
+          ],
+        },
+        {
+          isTable: true,
+          KEY: DRUID_4_LVL_ANIMAL_COMPANION_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: DRUID_7_LVL_ANIMAL_COMPANION_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: DRUID_10_LVL_ANIMAL_COMPANION_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: DRUID_13_LVL_ANIMAL_COMPANION_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: DRUID_16_LVL_ANIMAL_COMPANION_TABLE,
         },
       ],
     },
@@ -592,6 +639,10 @@ export const DRUID_PAGE: pageContentType = {
           VALUE: [
             `Выберите количество навыков равное 4 + модификатор Интеллекта`,
           ],
+        },
+        {
+          isTable: true,
+          KEY: DRUID_STARTER_PACK_TABLE,
         },
         {
           LABEL: 'Отличительная черта',
