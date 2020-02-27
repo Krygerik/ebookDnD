@@ -8,6 +8,7 @@ import { WARRIOR_PAGE } from './warrior'
 import { THIEF_PAGE } from './thief'
 import { DRUID_PAGE } from './druid'
 import { PRIEST_PAGE } from './priest'
+import { MAGE_PAGE } from './mage'
 
 export const childrenDataList = [
   CLASSES_PAGE,
@@ -20,4 +21,5 @@ export const childrenDataList = [
   THIEF_PAGE,
   DRUID_PAGE,
   PRIEST_PAGE,
+  MAGE_PAGE,
 ]
