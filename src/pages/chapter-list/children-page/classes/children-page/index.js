@@ -13,6 +13,7 @@ import { MONK_PAGE } from './monk'
 import { PALADIN_PAGE } from './paladin'
 import { RANGER_PAGE } from './ranger'
 import { ENCHANTER_PAGE } from './enchanter'
+import { LVL_AND_EXPIRIENCE_PAGE } from './lvl-and-expirience'
 
 export const childrenDataList = [
   CLASSES_PAGE,
@@ -30,4 +31,5 @@ export const childrenDataList = [
   PALADIN_PAGE,
   RANGER_PAGE,
   ENCHANTER_PAGE,
+  LVL_AND_EXPIRIENCE_PAGE,
 ]
