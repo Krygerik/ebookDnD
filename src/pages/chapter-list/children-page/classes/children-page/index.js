@@ -14,6 +14,7 @@ import { PALADIN_PAGE } from './paladin'
 import { RANGER_PAGE } from './ranger'
 import { ENCHANTER_PAGE } from './enchanter'
 import { LVL_AND_EXPIRIENCE_PAGE } from './lvl-and-expirience'
+import { MULTI_CLASS_CHARACTER_PAGE } from './multi-class'
 
 export const childrenDataList = [
   CLASSES_PAGE,
@@ -32,4 +33,5 @@ export const childrenDataList = [
   RANGER_PAGE,
   ENCHANTER_PAGE,
   LVL_AND_EXPIRIENCE_PAGE,
+  MULTI_CLASS_CHARACTER_PAGE,
 ]
