@@ -3,6 +3,7 @@ import { INTRODUCTION_PAGE } from './introduction'
 import { PARAMETERS_PAGE } from './parameters'
 import { RACE_LIST_PAGE } from './race'
 import { CLASSES_LIST_PAGE } from './classes'
+import { SKILLS_LIST_PAGE } from './skills'
 
 export const childrenDataList = [
   INTRODUCTION_PAGE,
@@ -10,4 +11,5 @@ export const childrenDataList = [
   PARAMETERS_PAGE,
   RACE_LIST_PAGE,
   CLASSES_LIST_PAGE,
+  SKILLS_LIST_PAGE,
 ]
