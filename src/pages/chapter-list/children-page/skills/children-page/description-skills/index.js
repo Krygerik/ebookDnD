@@ -1,5 +1,45 @@
 // @flow
 import { type pageContentType } from '@/components/page'
+import {
+  ACTING_EXAMPLE_TABLE,
+  BALANCE_TABLE,
+  BALANCE_SURFACE_MODIFY_TABLE,
+  SILENT_MOVEMENT_CHECKS_TABLE,
+  BLUFF_EXAMPLE_TABLE,
+  SKILL_LOCK_DEVICES_CHECKS_TABLE,
+  SKILL_PICKING_CHECKS_TABLE,
+  SKILL_PICKING_EXAMPLE_WALL_TABLE,
+  SKILL_HACKING_LOCKS_TABLE,
+  SKILL_INFLUENCE_NPC_TABLE,
+  SKILL_INFLUENCE_NPC_EXAMPLE_TABLE,
+  SKILL_ADDITIONAL_LANGUAGES_TABLE,
+  SKILL_HORSE_RIDING_TABLE,
+  SKILL_SURVIVAL_CHECKS_TABLE,
+  SKILL_ART_OF_MAGIC_CHECKS_TABLE,
+  SKILL_ART_OF_ESCAPE_CHECKS_TABLE,
+  SKILL_USE_ROPE_CHECKS_TABLE,
+  SKILL_USE_MAGIC_DEVICES_CHECKS_TABLE,
+  SKILL_CONCENTRATION_CHECKS_TABLE,
+  SKILL_HEALING_CHECKS_TABLE,
+  SKILL_SLEIGHT_OF_HAND_CHECKS_TABLE,
+  SKILL_DISGUISE_CHECKS_TABLE,
+  SKILL_DISGUISE_RECOGNITION_CHECKS_TABLE,
+  SKILL_TRACKING_TABLE,
+  SKILL_FALL_CHECKS_TABLE,
+  SKILL_FALL_MODIFY_CHECKS_TABLE,
+  SKILL_SWIMMING_CHECKS_TABLE,
+  SKILL_FAKE_MODIFY_CHECKS_TABLE,
+  SKILL_SEARCH_CHECKS_TABLE,
+  SKILL_TAMING_CHECKS_TABLE,
+  SKILL_TAMING_TARGET_CHECKS_TABLE,
+  SKILL_LISTENING_CHECKS_TABLE,
+  SKILL_LISTENING_MODIFY_CHECKS_TABLE,
+  SKILL_JUMPING_LONG_CHECKS_TABLE,
+  SKILL_JUMPING_HIGH_CHECKS_TABLE,
+  SKILL_JUMPING_SIZE_CREATURE_CHECKS_TABLE,
+  SKILL_CRAFT_CHECKS_TABLE,
+  SKILL_MOTIVE_CHECKS_TABLE,
+} from '@/tables'
 
 export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
   TITLE: 'Описание навыков',
@@ -77,8 +117,8 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
           VALUE: [
             `Любые условия, влияющие на успешное проведение навыка повторно. Или он не позволяет вам проходить
             проверку этого навыка более одного раза, или неудача дает
-            вам накапливаемый штраф (как при проверке Взбрирания);
-            вы не можете использовать здесь прием 20. Если эта строка
+            вам накапливаемый штраф (как при проверке Взбрирания)`,
+            `Вы не можете использовать здесь прием 20. Если эта строка
             отсутствует, то к повторным проверкам не применяются никакие штрафы и ограничения`,
           ],
         },
@@ -93,9 +133,11 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
         {
           LABEL: 'Синергия',
           VALUE: [
-            `Некоторые навыки гарантируют бонус в применении одного или нескольких навыков из-за их синергитичной связи. Если присутствует, то в этой строке отмечаются, какие бонусы гарантирует или получает этот навык благодаря синергии. Для полного списка бонусов синергии между
-            навыками (или между навыком и классовой особенностью)
-            смотрите Таблицу 4–5`,
+            `Некоторые навыки гарантируют бонус в применении одного или нескольких навыков
+            из-за их синергитичной связи. Если присутствует, то в этой строке отмечаются,
+            какие бонусы гарантирует или получает этот навык благодаря синергии`,
+            `Для полного списка бонусов синергии между навыками (или между навыком и
+            классовой особенностью) смотрите Таблицу 4–5`,
           ],
         },
         {
@@ -156,10 +198,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             этих инструментов`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: ACTING_EXAMPLE_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -218,14 +260,14 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             условий поверхности`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // },
+        {
+          isTable: true,
+          KEY: BALANCE_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: BALANCE_SURFACE_MODIFY_TABLE,
+        },
         {
           LABEL: 'Атакуемый во Время Балансирования',
           VALUE: [
@@ -289,15 +331,14 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             услышать. Вы можете двигаться с половиной вашей скорости
             без штрафов. Если вы передвигаетесь выше половины своей скорости, вплоть до полной скорости, то вы переносите
             штраф –5. Практически невозможно (штраф –20) бесшумно
-            передвигаться на бегу или стремительно перемещаясь`,
-            `По шумным поверхностям, такие как болота или густая
+            передвигаться на бегу или стремительно перемещаясь по шумным поверхностям, такие как болота или густая
             растительность довольно таки тяжело передвигаться бесшумно. Когда вы пытаетесь прокрасться по таким поверхностям, вы переносите соответствующий штраф`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // },
+        {
+          isTable: true,
+          KEY: SILENT_MOVEMENT_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -322,27 +363,34 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
         {
           LABEL: '(Обаяние)',
           VALUE: [
-            `Вы способны делать страшное или лживое весьма правдоподобным. Навык подразумевает под собой действия: быстрый
-            разговор, сбитие с толку, уклонение от ответа, обманчивые
-            жесты, инсинуацию. Применяйте блеф для вызова временного замешательства, заставить кого-то повернуть голову в ту
+            `Вы способны делать страшное или лживое весьма правдоподобным. Навык подразумевает под собой действия:`,
+            `быстрый разговор`,
+            `сбитие с толку`,
+            `уклонение от ответа`,
+            `обманчивые жесты`,
+            `инсинуацию`,
+            `Применяйте блеф для вызова временного замешательства, заставить кого-то повернуть голову в ту
             сторону, куда вы указываете или просто выглядеть безобидным`,
           ],
         },
         {
           LABEL: 'Проверка',
           VALUE: [
-            `Встречной проверкой для Блефа является проверка Чувства Мотива. Сморите соотвествующую таблицу,
+            `Встречной проверкой для Блефа является проверка Чувства Мотива. Смотрите соотвествующую таблицу,
             где приведены различные примеры блефа и модификаторы
             проверки Чувства Мотива`,
             `Благоприятные и неблагоприятные условия очень сильно
             влияют на исходный результат. Два первоочередных условия
-            работают против вас: В блеф тяжело поверить, если слова, которые произносит персонаж, противоречат его природе, личности, установленным порядкам. Если это важно, МП может
-            различать между блефом, который был неудачен, и неудачей
+            работают против вас:`,
+            `В блеф тяжело поверить, если слова, которые произносит персонаж, противоречат его природе, личности, установленным порядкам`,
+            `Если это важно, МП может различать между блефом, который был неудачен, и неудачей
             из-за того, что персонаж слишком много затребовал у своей
-            цели. К примеру, если цель получает +10 бонус, так как бонус
+            цели`,
+            `(К примеру, если цель получает +10 бонус, так как бонус
             подразумевает под собой что-то рискованное при произношении блефа, а проверка Чувства Мотива была 10 или менее,
             тогда оппонент не слишком замечает блеф, лишь небольшое
-            преувеличивание. Если оппонент проходит проверку 11 и более, он прослеживает, что это блеф и вранье (и отметит это,
+            преувеличивание)`,
+            `Если оппонент проходит проверку 11 и более, он прослеживает, что это блеф и вранье (и отметит это,
             даже если блеф напрямую с ним не связан)`,
             `Успешная проверка Блефа означает, что цель проверки
             действует так как вы желаете, по крайней мере короткий период времени (обычно 1 раунд или менее), или верит в то, что
@@ -354,10 +402,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             `Блеф подразумевает взаимодействие между вами и целью. Существ не осведомленных о вас, нельзя одурачить`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: BLUFF_EXAMPLE_TABLE,
+        },
         {
           LABEL: 'Ложные Выпады в Бою',
           VALUE: [
@@ -367,16 +415,26 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             вместе с остальными модификаторами. Если проверка Блефа
             успешна, ваша следующая атака против этого противника не
             позволяет ему применять бонус Ловкости к своему Классу
-            Доспеха (если бонус есть). Эту атаку необоходимо провести
+            Доспеха (если бонус есть). Эту атаку необходимо провести
             в или перед вашим следующим ходом`,
             `Ложный выпад против не-гуманоидного создания тяжелее, так как тяжело понять язык телодвижений необычного
             существа; это отражается в штрафе –4 к вашей проверке Блефа. Против существ с Интеллектом животного (1 или 2) ещё
             тяжелее, штраф –8. Против неинтеллектуальных существ,
             проведение выпадов невозможно`,
             `Финты в сражении не провоцируют благоприятной атаки`,
-            `Отвлечение Внимания для Скрывания: Блеф может помочь вам скрыться. Успешная проверка Блефа даёт вам мгновенную возможность проверки Скрытности, пока внимание
+          ],
+        },
+        {
+          LABEL: 'Отвлечение Внимания для Скрывания',
+          VALUE: [
+            `Блеф может помочь вам скрыться. Успешная проверка Блефа даёт вам мгновенную возможность проверки Скрытности, пока внимание
             окружающих отвлечено от вас. Это использование не провоцирует благоприятной атаки`,
-            `Передача Секретного Послания: Вы можете использовать Блеф для передачи послания другому персонажу, чтобы
+          ],
+        },
+        {
+          LABEL: 'Передача Секретного Послания',
+          VALUE: [
+            `Вы можете использовать Блеф для передачи послания другому персонажу, чтобы
             другие не поняли его смысл. К примеру, два вора могут разговаривать о товарах в булочной, и в то же время в разговоре они могут полностью спланировать свое проникновение
             в лабораторию злого мага. КС для несложного послания 15,
             для комплексных посланий КС составляет 20, особенно если преподносится какая-то новая информация. Если проверка
@@ -478,10 +536,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             минуты использования)`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_LOCK_DEVICES_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -654,14 +712,14 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             и сами срываетесь вслед за ним`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_PICKING_CHECKS_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: SKILL_PICKING_EXAMPLE_WALL_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -729,10 +787,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             `КС для взлома замка может быть от 20 до 40, и зависеть от качества замка, примеры приведены ниже в таблице`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_HACKING_LOCKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -830,19 +888,23 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             к вам, или проверок дикой эмпатии при оказании влияния
             на расположение к вам животного или магического зверя. В
             Руководстве Мастера Подземелий предоставлена более подробная информация об отношениях НИП`,
+          ],
+        },
+        {
+          isTable: true,
+          KEY: SKILL_INFLUENCE_NPC_TABLE,
+        },
+        {
+          VALUE: [
             `Например, персонаж столкнулся с не-игровым персонажем, чье первичное отношение враждебно. Чтобы сменить отношение этого НИП к нему, он должен при проверке
             Дипломатии (или Обаяния) получить результат 20 и выше.
             Любой результат ниже 20, оставит отношение НИП неизменным. При результате 20–24, отношение НИП сменится на недружелюбное`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_INFLUENCE_NPC_EXAMPLE_TABLE,
+        },
       ],
     },
     {
@@ -852,10 +914,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
         {
           LABEL: '(Нет, Только тренированный)',
         },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_ADDITIONAL_LANGUAGES_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [`Не применяется`],
@@ -874,10 +936,6 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             каждого языка есть свой алфавит (хотя у некоторых языков, может быть общий алфавит)`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
       ],
     },
     {
@@ -902,10 +960,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             всё же требуют проверки`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_HORSE_RIDING_TABLE,
+        },
         {
           VALUE: [
             `Слушаться Колен`,
@@ -1199,10 +1257,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             Чтение Следов (смотрите секцию Ограничение ниже)`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_SURVIVAL_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -1281,10 +1339,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             ниже`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_ART_OF_MAGIC_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [`Различно, смотрите выше`],
@@ -1335,10 +1393,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             `Нижеприведенная таблица перечисляет КС связанные с Искусством Побега`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_ART_OF_ESCAPE_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Верёвки`,
@@ -1424,10 +1482,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             связанные с Использованием Веревки`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_USE_ROPE_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Опутать Петлей`,
@@ -1506,10 +1564,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             `Вы должны, осознано избирать, что вы хотите сымитировать. Так как вы должны знать, что конкретно вы имитируете для данной проверки`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_USE_MAGIC_DEVICES_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Активация в Слепую`,
@@ -1679,15 +1737,15 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
           LABEL: 'Проверка',
           VALUE: [
             `Вы проходите проверку Концентрации при попадании в неблагоприятные условия, и в это же время пытаетесь выполнить действие, которое требует от вас всего
-              внимания (например, перенося повреждение, попадание заклинания
-              противника, препятствующие активации условия погоды и
-              тому подобное). такие действия включают в себя активацию
-              заклинаний, концентрацию на сактивированном заклинании
-              (например, определение магии), нацеливании заклинания (такое как духовное оружие), использовании магической способности (например, способность паладина излечить болезнь),
-              или использование навыка, который провоцирует благоприятную атаку (такой как Блокировка Устройств, Взлом Замков,
-              Использование Веревки и Лечение, и т.д). В целом, если действие обычно не провоцирует благоприятной атаки, то вам
-              не нужно проходить проверки Концентрации, для того чтобы
-              быть отвлеченным`,
+            внимания (например, перенося повреждение, попадание заклинания
+            противника, препятствующие активации условия погоды и
+            тому подобное). такие действия включают в себя активацию
+            заклинаний, концентрацию на сактивированном заклинании
+            (например, определение магии), нацеливании заклинания (такое как духовное оружие), использовании магической способности (например, способность паладина излечить болезнь),
+            или использование навыка, который провоцирует благоприятную атаку (такой как Блокировка Устройств, Взлом Замков,
+            Использование Веревки и Лечение, и т.д). В целом, если действие обычно не провоцирует благоприятной атаки, то вам
+            не нужно проходить проверки Концентрации, для того чтобы
+            быть отвлеченным`,
             `Если проверка Концентрации успешна, вы можете нормально выполнять это действие. Если проверка неудачна, действие
             автоматически провалено и потеряно. Если вы активировали
             заклинание, то заклинание утеряно (смотрите Активация Заклинаний на стр. 18_). Если вы находились в концентрации на
@@ -1701,10 +1759,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             за каждое; любой провал Концентрации обозначает, что задание не выполнено`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_CONCENTRATION_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -1761,10 +1819,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
           перед собой поставили`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_HEALING_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Первая Помощь`,
@@ -1884,10 +1942,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             штрафом –20`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_SLEIGHT_OF_HAND_CHECKS_TABLE,
+        },
         {
           LABEL: 'Повторно',
           VALUE: [
@@ -1951,10 +2009,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             кого вы хотите замаскироваться, и сколько изменений вам необходимо провести`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_DISGUISE_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Если вы хотите провести вокруг пальца, личность, кто
@@ -1971,6 +2029,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             нет рангов в Отслеживании, а у нескольких хорошо развитый
             навык Отслеживание)`,
           ],
+        },
+        {
+          isTable: true,
+          KEY: SKILL_DISGUISE_RECOGNITION_CHECKS_TABLE,
         },
         {
           LABEL: 'Действие',
@@ -2037,10 +2099,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             если происходит помеха (не концентрируется на обозрении)`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_TRACKING_TABLE,
+        },
         {
           LABEL: 'Чтение по Губам',
           VALUE: [
@@ -2194,10 +2256,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             КС для различных заданий связанных с Падением/Кульбиты рассмотрены ниже в таблице`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_FALL_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Преграждаемые или прочие неустойчивые поверхности,
@@ -2205,10 +2267,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             Кульбиты в такие клетки модифицируются следующим образом`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_FALL_MODIFY_CHECKS_TABLE,
+        },
         {
           LABEL: 'Ускоренные Кульбиты',
           VALUE: [
@@ -2295,10 +2357,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             ниже в таблице`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_SWIMMING_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `За каждый час вашего плавания, проводите проверку Плавания против КС 20, или переносите 1d6 временного повреждения от усталости`,
@@ -2376,10 +2438,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             документа`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_FAKE_MODIFY_CHECKS_TABLE,
+        },
         {
           LABEL: 'Особое',
           VALUE: [
@@ -2419,10 +2481,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             ниже в таблице`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_SEARCH_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -2494,10 +2556,14 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             КС зависит от того, что вы пытаетесь сделать`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_TAMING_CHECKS_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: SKILL_TAMING_TARGET_CHECKS_TABLE,
+        },
         {
           LABEL: 'Руководство Животным',
           VALUE: [
@@ -2776,14 +2842,14 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             на d20 10, то проверка результата была бы 19)`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_LISTENING_CHECKS_TABLE,
+        },
+        {
+          isTable: true,
+          KEY: SKILL_LISTENING_MODIFY_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -2933,10 +2999,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             необходимо потратить действие передвижения и пройти проверку Взбирания против КС 15`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_JUMPING_LONG_CHECKS_TABLE,
+        },
         {
           LABEL: 'Прыжок в Высоту',
           VALUE: [
@@ -2949,10 +3015,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             недопрыгнули, и приземлились в том же месте, откуда прыгали. Как и с прыжком в длину, КС удваивается, если вы предварительно не совершили разбег как минимум на 6 метров`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_JUMPING_HIGH_CHECKS_TABLE,
+        },
         {
           VALUE: [
             `Это очевидно, что достижение различной высоты может
@@ -2963,10 +3029,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             на одну категорию меньше`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_JUMPING_SIZE_CREATURE_CHECKS_TABLE,
+        },
         {
           LABEL: 'Запрыгнуть',
           VALUE: [
@@ -3179,10 +3245,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             `Когда вы используете навык Ремесло для создания определенного предмета, характерный КС для проверки такого предмета указаны в следующей таблице`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: ''
-        // }
+        {
+          isTable: true,
+          KEY: SKILL_CRAFT_CHECKS_TABLE,
+        },
         {
           LABEL: 'Действие',
           VALUE: [
@@ -3396,10 +3462,10 @@ export const DESCRIPTION_SKILLS_PAGE: pageContentType = {
             их прошли`,
           ],
         },
-        // {
-        //   isTable: true,
-        //   KEY: '',
-        // },
+        {
+          isTable: true,
+          KEY: SKILL_MOTIVE_CHECKS_TABLE,
+        },
         {
           LABEL: 'Предчувствие',
           VALUE: [
